@@ -5,15 +5,12 @@
 body {
   font-family: Helvetica,Arial,sans-serif;
   margin: 0;
-}
-
-.App {
-  margin-top: 50px;
+  margin-top: 50px; /* for the fixed header */
   position: relative;
 }
 
 @media (min-width: 640px) {
-  .App {
+  body {
     margin-top: 63px;
   }
 }
