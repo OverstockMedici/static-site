@@ -66,6 +66,14 @@ export default {
                     news,
                 }),
             },
+            {
+                path: '/contact',
+                template: 'src/pages/contact/Contact',
+            },
+            {
+                path: '404',
+                template: 'src/pages/notFound/NotFound',
+            },
         ];
     },
     plugins: [
