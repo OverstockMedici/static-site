@@ -4,8 +4,8 @@ import admin from 'firebase-admin';
 const initialize = async () => {
     if (admin.apps.length === 0) {
         admin.initializeApp({
-          credential: admin.credential.applicationDefault(),
-          databaseURL: 'https://corp-200921.firebaseio.com'
+            credential: admin.credential.applicationDefault(),
+            databaseURL: 'https://corp-200921.firebaseio.com',
         });
     }
 };
@@ -20,34 +20,38 @@ export default {
             .limit(9)
             .get()
             .then(function(querySnapshot) {
-              const newsList = [];
-              querySnapshot.forEach(function(doc) {
-                newsList.push(doc.data());
-              });
-              return newsList;
+                const newsList = [];
+                querySnapshot.forEach(function(doc) {
+                    const data = doc.data();
+                    newsList.push({ ...data, id: doc.id });
+                });
+                return newsList;
             })
             .catch(function(error) {
-                console.log("Error getting documents: ", error);
+                console.log('Error getting documents: ', error);
             });
-            
+
         const jobs = await db
             .collection('jobs')
             .doc('all')
             .get()
             .then(doc => {
                 if (doc.exists) {
-                  return doc.data().jobs;
+                    return doc.data().jobs;
                 } else {
                     // doc.data() will be undefined in this case
-                    console.log("No such document!");
+                    console.log('No such document!');
                 }
-            }).catch(function(error) {
-                console.log("Error getting document:", error);
+            })
+            .catch(function(error) {
+                console.log('Error getting document:', error);
             });
 
-            console.log('jobs: ', jobs);
-
         return [
+            {
+                path: '/companies',
+                template: 'src/pages/companies/Companies',
+            },
             {
                 path: '/team',
                 template: 'src/pages/team/Team',
