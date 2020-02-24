@@ -13,12 +13,6 @@ export const content = {
             image: '/img/jonathan-johnson-640.jpg'
         },
         {
-            name: 'Joel Weight',
-            title: 'Chief Operating Officer',
-            info: 'Previous Overstock.com, Access Development, Sungard Higher Education',
-            image: '/img/joel-weight-640.jpg'
-        },
-        {
             name: 'Jeremy Smith',
             title: 'Chief Technology Officer',
             info: 'Previous: EXL, Taulia Inc., Overland Solutions, Castle Inspection Service',

@@ -24,7 +24,6 @@ export default function Team() {
     }, []);
 
     const { jobs } = useRouteData();
-    console.log('jobs: ', jobs);
 
     const pdfPath = '/img/Medici+Ventures+Vision+Statement+and+Core+Values.pdf';
     const handlePdfDownload = (e) => {
