@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Helvetica,Arial,sans-serif;
+  margin: 0;
+}
+
+.App {
+  margin-top: 50px;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .App {
+    margin-top: 63px;
+  }
+}
