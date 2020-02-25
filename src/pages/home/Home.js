@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
+import Meta from '../../components/Meta';
 import { Main, Hero, DownButton, Overview, Industries, WhoIs, LearnMore } from './home.style';
-import { ButtonLink } from '../components/ButtonLink';
-import { home, meta } from '../content/home.content';
+import { ButtonLink } from '../../components/ButtonLink';
+import { home, meta } from '../../content/home.content';
 
 const peaceColiseum = 'img/peace-coliseum.png';
 const peaceColiseumTall = 'img/peace-coliseum-350-tall.jpg';
@@ -24,11 +25,8 @@ export default function Home() {
     const refOverview = useRef(null);
     const refIndustriesContainer = useRef(null);
 
-
     useEffect(() => {
         smoothscroll.polyfill();
-
-        document.title = meta.title;
 
         // Observer to add the animated class to initial animations
         const observer = new IntersectionObserver((entries) => {
@@ -85,6 +83,7 @@ export default function Home() {
 
     return (
         <div className="home">
+            <Meta {...meta} />
             <Main role="main">
                 <Hero>
                     <div className="text-1">Advancing</div>

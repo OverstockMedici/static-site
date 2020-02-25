@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Meta from '../../components/Meta';
 import { Link } from 'components/Router';
 import { Main } from './notFound.style';
 import { meta } from '../../content/notFound.content';
 
 export default function NotFound() {
-    useEffect(() => {
-        document.title = meta.title;
-    }, []);
     return (
         <div className="not-found">
+            <Meta {...meta} />
             <Main role="main">
                 <p>We couldn&apos;t find the page you were looking for. This is either because:</p>
                 <ul>

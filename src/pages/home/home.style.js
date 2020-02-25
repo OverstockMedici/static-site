@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../style/colors';
+import { colors } from '../../style/colors';
 
 const heroImgSm = 'img/home-landing-small.png';
 const heroImgMd = 'img/home-landing-medium.png';

@@ -1,5 +1,6 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import dayjs from 'dayjs';
+import Meta from '../../components/Meta';
 import { Hero, Articles, Article } from './news.style';
 import { content, meta } from '../../content/news.content';
 import { useRouteData } from 'react-static';
@@ -7,10 +8,6 @@ import { useRouteData } from 'react-static';
 const { heading1 } = content;
 
 export default function News() {
-    useEffect(() => {
-        document.title = meta.title;
-    }, []);
-
     const { news } = useRouteData();
 
     const buildParagraphs = paragraphs => (
@@ -39,6 +36,7 @@ export default function News() {
 
     return (
         <div className="news">
+            <Meta {...meta} />
             <main role="main">
                 <Hero>
                     <h1>{heading1}</h1>

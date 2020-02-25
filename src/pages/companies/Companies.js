@@ -1,4 +1,5 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
+import Meta from '../../components/Meta';
 import { Context } from '../../store';
 import { ButtonLink } from '../../components/ButtonLink';
 import MobileCompanyList from './MobileCompanyList';
@@ -11,10 +12,6 @@ const { heading1, heading1b } = content;
 export default function Companies() {
     const { store } = useContext(Context);
 
-    useEffect(() => {
-        document.title = meta.title;
-    }, []);
-
     const renderCompanyList = () => (
         store.isMobile ?
             <MobileCompanyList /> :
@@ -24,6 +21,7 @@ export default function Companies() {
     return (
         <div className="companies">
             <Main role="main">
+                <Meta {...meta} />
                 <Hero>
                     <h1><span>{heading1}</span><br />{heading1b}</h1>
                 </Hero>
