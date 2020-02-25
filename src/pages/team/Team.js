@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import Particle from 'particleground-light';
+import Meta from '../../components/Meta';
 import { Link } from 'components/Router';
 import { ButtonLinkReversed } from '../../components/ButtonLink';
 import { Hero, HeroContent, Blockquote, Cite, TeamList, JobListings, StyledArrow } from './team.style';
@@ -12,7 +13,6 @@ const arrowRight = '/img/arrow-right-green.png';
 
 export default function Team() {
     useEffect(() => {
-        document.title = meta.title;
         // TODO dynamically import Particle
         const pg1 = new Particle(document.getElementById('particles-foreground'), foregroundOptions);
         const pg2 = new Particle(document.getElementById('particles-background'), backgroundOptions);
@@ -58,6 +58,7 @@ export default function Team() {
 
     return (
         <div className="team">
+            <Meta {...meta} />
             <main role="main">
                 <Hero>
                     <div id="particles-background" />

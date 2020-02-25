@@ -1,5 +1,6 @@
 import path from 'path';
 import admin from 'firebase-admin';
+import React from 'react';
 
 const initialize = async () => {
     if (admin.apps.length === 0) {
@@ -11,6 +12,7 @@ const initialize = async () => {
 };
 
 export default {
+    siteRoot: 'https://www.mediciventures.com',
     getRoutes: async () => {
         await initialize();
         const db = admin.firestore();
@@ -49,6 +51,10 @@ export default {
 
         return [
             {
+                path: '/',
+                template: 'src/pages/home/Home',
+            },
+            {
                 path: '/companies',
                 template: 'src/pages/companies/Companies',
             },
@@ -60,7 +66,7 @@ export default {
                 }),
             },
             {
-                path: 'news',
+                path: '/news',
                 template: 'src/pages/news/News',
                 getData: () => ({
                     news,
@@ -75,6 +81,60 @@ export default {
                 template: 'src/pages/notFound/NotFound',
             },
         ];
+    },
+    Document: ({ Html, Head, Body, children, state: { routeInfo, renderMeta, inlineScripts } }) => {
+        const logo = '/img/medici-ventures-logo.png';
+        const domain = 'https://www.mediciventures.com';
+        const gTag = `
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-145816993-1');
+        `;
+
+        const jsonLd = `
+            [
+                {
+                    "url":"https://www.mediciventures.com",
+                    "name":"Medici Ventures INC",
+                    "description":"Medici Ventures is a wholly-owned subsidiary of Overstock.com launched in 2014. Our goal is to change the world by advancing blockchain technology.",
+                    "image":"${domain}${logo}",
+                    "@context":"http://schema.org",
+                    "@type":"WebSite"
+                },
+                {
+                    "legalName":"Medici Ventures Inc",
+                    "email":"info@mediciventures.com",
+                    "@context":"http://schema.org",
+                    "@type":"Organization"
+                },
+                {
+                    "address":"Coliseum Way\nMidvale, UT, 84047\nUnited States",
+                    "telephone":"801-947-3100",
+                    "image":"${domain}${logo}",
+                    "name":"Medici Ventures Inc",
+                    "@context":"http://schema.org",
+                    "@type":"Place"
+                }
+            ]
+        `;
+
+        return (
+            <Html lang="en-US">
+                <Head>
+                    <meta charSet="UTF-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+                    <link rel="preconnect" href="https://www.google-analytics.com" />
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145816993-1"></script>
+                    <script dangerouslySetInnerHTML={{__html: gTag}} />
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLd}} />
+                </Head>
+                <Body>{children}</Body>
+            </Html>
+        );
     },
     plugins: [
         [

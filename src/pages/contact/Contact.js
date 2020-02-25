@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Meta from '../../components/Meta';
 import postData from './contact.post';
 import { HeroImg, H2, Inquiries, MapImg, ContactH2, ContactForm, ServerMsg, Button } from './contact.style';
 import { meta } from '../../content/contact.content';
@@ -11,10 +12,6 @@ const mapImgSm = '/img/contact-map-600.jpg';
 
 
 export default function Contact() {
-    useEffect(() => {
-        document.title = meta.title;
-    }, []);
-
     const defaultState = {
         fname: '',
         lname: '',
@@ -71,6 +68,7 @@ export default function Contact() {
 
     return (
         <div className="contact">
+            <Meta {...meta} />
             <main role="main">
                 <HeroImg>
                     <source media="(min-width: 1200px)" srcSet={heroImgLg} />
