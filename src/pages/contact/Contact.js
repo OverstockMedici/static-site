@@ -4,6 +4,8 @@ import postData from './contact.post';
 import { HeroImg, H2, Inquiries, MapImg, ContactH2, ContactForm, ServerMsg, Button } from './contact.style';
 import { meta } from '../../content/contact.content';
 
+const emailServiceUrl = 'https://us-central1-corp-200921.cloudfunctions.net/medici-contact-form-service';
+
 const heroImgSm = '/img/coliseum-closeup-600.jpg';
 const heroImgMed = '/img/coliseum-closeup-900.jpg';
 const heroImgLg = '/img/coliseum-closeup-1200.jpg';
@@ -13,6 +15,12 @@ const mapImgSm = '/img/contact-map-600.jpg';
 
 export default function Contact() {
     const defaultState = {
+        error: false,
+        serverMsg: '',
+        loading: false
+    };
+    const [state, setState] = useState(defaultState);
+    const defaultFormData = {
         fname: '',
         lname: '',
         company: '',
@@ -20,15 +28,11 @@ export default function Contact() {
         email: '',
         subject: '',
         message: '',
-        error: false,
-        serverMsg: '',
-        loading: false
-
     };
-    const [state, setState] = useState(defaultState);
+    const [formData, setFormData] = useState(defaultFormData);
     const handleInputChange = (e) => {
-        setState({
-            ...state,
+        setFormData({
+            ...formData,
             [e.target.name]: e.target.value
         });
     };
@@ -38,7 +42,7 @@ export default function Contact() {
             ...defaultState,
             loading: true
         });
-        postData('/contact', state)
+        postData(emailServiceUrl, formData)
             .then(res => res.json())
             .then((response) => {
                 setState({
@@ -46,6 +50,9 @@ export default function Contact() {
                     loading: false,
                     serverMsg: response.message
                 });
+                setFormData({
+                    ...defaultFormData
+                })
             })
             .catch((error) => {
                 setState({
@@ -62,9 +69,10 @@ export default function Contact() {
             <Button type="submit" disabled>Submitting</Button> :
             <Button type="submit">Submit</Button>
     );
-    // TODO: viewStates
     // TODO: unit tests
     // TODO: replace fetch with axios or polyfill
+    
+    const { fname, lname, company, phone, email, subject, message } = formData;
 
     return (
         <div className="contact">
@@ -116,7 +124,7 @@ export default function Contact() {
                                         type="text"
                                         id="firstName"
                                         name="fname"
-                                        value={state.fname}
+                                        value={fname}
                                         maxLength="30"
                                         required
                                         onChange={handleInputChange}
@@ -128,7 +136,7 @@ export default function Contact() {
                                         type="text"
                                         id="lastName"
                                         name="lname"
-                                        value={state.lname}
+                                        value={lname}
                                         maxLength="30"
                                         onChange={handleInputChange}
                                     />
@@ -140,7 +148,7 @@ export default function Contact() {
                                 type="text"
                                 id="company"
                                 name="company"
-                                value={state.company}
+                                value={company}
                                 maxLength="100"
                                 onChange={handleInputChange}
                             />
@@ -149,7 +157,7 @@ export default function Contact() {
                                 type="email"
                                 id="email"
                                 name="email"
-                                value={state.email}
+                                value={email}
                                 maxLength="100"
                                 required
                                 onChange={handleInputChange}
@@ -159,7 +167,7 @@ export default function Contact() {
                                     type="text"
                                     id="phone"
                                     name="phone"
-                                    value={state.phone}
+                                    value={phone}
                                     maxLength="12"
                                     onChange={handleInputChange}
                                 />
@@ -169,7 +177,7 @@ export default function Contact() {
                                 type="text"
                                 id="subject"
                                 name="subject"
-                                value={state.subject}
+                                value={subject}
                                 maxLength="100"
                                 required
                                 onChange={handleInputChange}
@@ -179,7 +187,7 @@ export default function Contact() {
                                 id="message"
                                 maxLength="500"
                                 name="message"
-                                value={state.message}
+                                value={message}
                                 required
                                 onChange={handleInputChange}
                             />
