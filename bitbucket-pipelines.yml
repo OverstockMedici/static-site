@@ -1,0 +1,22 @@
+image: google/cloud-sdk:282.0.0
+
+pipelines:
+  default:
+    - step:
+        name: Stage
+        script:
+          - | # setup NVM and Yarn environment
+            export DEBIAN_FRONTEND=noninteractive
+            apt update; apt install -y curl
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+            source ~/.bashrc || true
+            nvm install
+            curl -o- -L https://yarnpkg.com/install.sh | bash
+            source ~/.bashrc
+          - | # Setup gcloud auth
+            echo $CORP_STATIC_AUTH > auth.json
+            export GOOGLE_APPLICATION_CREDENTIALS=auth.json
+            gcloud auth activate-service-account --key-file=auth.json
+          - yarn
+          - yarn stage
+          - gsutil -m rsync -r -d dist gs://stage-site.medici.io
