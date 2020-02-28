@@ -13,6 +13,7 @@ const initialize = async () => {
 
 export default {
     siteRoot: 'https://www.mediciventures.com',
+    stagingSiteRoot: '/',
     getRoutes: async () => {
         await initialize();
         const db = admin.firestore();
@@ -52,33 +53,33 @@ export default {
         return [
             {
                 path: '/',
-                template: 'src/pages/home/Home',
+                template: 'src/routes/home/Home',
             },
             {
                 path: '/companies',
-                template: 'src/pages/companies/Companies',
+                template: 'src/routes/companies/Companies',
             },
             {
                 path: '/team',
-                template: 'src/pages/team/Team',
+                template: 'src/routes/team/Team',
                 getData: () => ({
                     jobs,
                 }),
             },
             {
                 path: '/news',
-                template: 'src/pages/news/News',
+                template: 'src/routes/news/News',
                 getData: () => ({
                     news,
                 }),
             },
             {
                 path: '/contact',
-                template: 'src/pages/contact/Contact',
+                template: 'src/routes/contact/Contact',
             },
             {
                 path: '404',
-                template: 'src/pages/notFound/NotFound',
+                template: 'src/routes/notFound/NotFound',
             },
         ];
     },
