@@ -19,7 +19,6 @@
     "react-static": "^7.2.0",
     "react-static-plugin-reach-router": "^7.2.0",
     "react-static-plugin-sitemap": "^7.2.0",
-    "react-static-plugin-source-filesystem": "^7.2.0",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.0.1"
   },
