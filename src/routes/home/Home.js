@@ -5,6 +5,7 @@ import { Main, Hero, DownButton, Overview, Industries, WhoIs, LearnMore } from '
 import { ButtonLink } from '../../components/ButtonLink';
 import { home, meta } from '../../content/home.content';
 
+const advancingBlockchainTechnology = 'img/ABT.svg';
 const peaceColiseum = 'img/peace-coliseum.png';
 const peaceColiseumTall = 'img/peace-coliseum-350-tall.jpg';
 const peaceColiseum380 = 'img/peace-coliseum-380.jpg';
@@ -86,9 +87,10 @@ export default function Home() {
             <Meta {...meta} />
             <Main role="main">
                 <Hero>
-                    <div className="text-1">Advancing</div>
+                    {/* <div className="text-1">Advancing</div>
                     <div className="text-2">Blockchain</div>
-                    <div className="text-3">Technology</div>
+                    <div className="text-3">Technology</div> */}
+                    <img src={advancingBlockchainTechnology} alt="Advancing Blockchain Technology" />
                     <DownButton onClick={scrollDown} aria-label="Arrow Down" title="Arrow Down" />
                 </Hero>
 
