@@ -36,10 +36,5 @@
     "eslint-plugin-react": "^7.14.3",
     "extract-css-chunks-webpack-plugin": "4.6.0",
     "serve": "^11.1.0"
-  },
-  "browsersList": [
-    "last 4 versions",
-    "Firefox ESR",
-    "not ie < 9"
-  ]
+  }
 }
