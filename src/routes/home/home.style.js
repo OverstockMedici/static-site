@@ -30,10 +30,19 @@ export const Hero = styled.section`
         max-width: 50%;
     }
 
+    @media (min-width: 650px) {
+        background-image: url(${heroImgMd});
+    }
+
     @media (min-width: 870px) {
+        background-image: url(${heroImgLg});
         img {
             max-width: 90%;
         }
+    }
+
+    @media (min-width: 1200px) {
+        height: 90vh;
     }
 `;
 
