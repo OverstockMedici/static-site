@@ -27,6 +27,8 @@ export const Hero = styled.section`
     position:relative;
 
     img {
+        width: 703px;
+        height: 315px;
         max-width: 50%;
     }
 
