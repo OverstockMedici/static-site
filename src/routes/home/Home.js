@@ -87,9 +87,6 @@ export default function Home() {
             <Meta {...meta} />
             <Main role="main">
                 <Hero>
-                    {/* <div className="text-1">Advancing</div>
-                    <div className="text-2">Blockchain</div>
-                    <div className="text-3">Technology</div> */}
                     <img src={advancingBlockchainTechnology} alt="Advancing Blockchain Technology" />
                     <DownButton onClick={scrollDown} aria-label="Arrow Down" title="Arrow Down" />
                 </Hero>
