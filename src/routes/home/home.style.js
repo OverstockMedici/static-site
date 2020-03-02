@@ -26,36 +26,20 @@ export const Hero = styled.section`
     max-height: 100vh;
     position:relative;
 
-    div {
-        font-size: 1.5em;
-        line-height: 1;
-        text-align: justify;
-        text-transform: uppercase;
-    }
-    .text-1 {
-        font-weight: 900;
-        letter-spacing: .12em;
-    }
-    .text-2 {
-        font-weight: 500;
-        letter-spacing: .07em;
-    }
-    .text-3 {
-        font-weight: 300;
-        letter-spacing: .01em;
+    img {
+        width: 703px;
+        height: 315px;
+        max-width: 50%;
     }
 
     @media (min-width: 650px) {
         background-image: url(${heroImgMd});
-        div {
-            font-size: 50px;
-        }
     }
 
     @media (min-width: 870px) {
         background-image: url(${heroImgLg});
-        div {
-            font-size: 100px;
+        img {
+            max-width: 90%;
         }
     }
 
