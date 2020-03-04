@@ -42,7 +42,7 @@ pipelines:
             - yarn stage
             - *upload
       - step:
-          name: Stage
+          name: Prod
           script:
             - *setupTools
             - *setupAuth
