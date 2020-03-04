@@ -43,6 +43,7 @@ pipelines:
             - *upload
       - step:
           name: Prod
+          trigger: manual
           script:
             - *setupTools
             - *setupAuth
