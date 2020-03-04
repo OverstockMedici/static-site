@@ -6,7 +6,7 @@ import CloseIcon from '../icons/CloseIcon';
 export default function MobileNav(props) {
     const { handleClose, nav, showNav } = props;
     const buildLinks = nav.map(item => (
-        <StyledLink to={item.link} key={item.link}>{item.name}</StyledLink>
+        <StyledLink to={item.link} key={item.link} onClick={handleClose}>{item.name}</StyledLink>
     ));
 
     return (
