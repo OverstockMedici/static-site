@@ -14,7 +14,7 @@ export default function MobileNav(props) {
             <Close aria-label="Close Nav Menu" title="Close Nav Menu" onClick={handleClose}>
                 <CloseIcon />
             </Close>
-            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/" onClick={handleClose}>Home</StyledLink>
             {buildLinks}
         </Nav>
     );
