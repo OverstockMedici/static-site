@@ -47,7 +47,7 @@ pipelines:
           script:
             - *setupTools
             - *setupAuth
-            - export BUCKET=mediciventures.com
+            - export BUCKET=www.mediciventures.com
             - yarn
             - yarn build
             - *upload
