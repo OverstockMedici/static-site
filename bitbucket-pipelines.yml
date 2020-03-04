@@ -1,22 +1,52 @@
 image: google/cloud-sdk:282.0.0
 
+.setupTools: &setupTools | # setup NVM and Yarn environment
+  export DEBIAN_FRONTEND=noninteractive
+  apt update; apt install -y curl
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+  source ~/.bashrc || true
+  nvm install
+  curl -o- -L https://yarnpkg.com/install.sh | bash
+  source ~/.bashrc
+
+.setupAuth: &setupAuth | # Setup gcloud auth
+  echo $CORP_STATIC_AUTH > auth.json
+  export GOOGLE_APPLICATION_CREDENTIALS=auth.json
+  gcloud auth activate-service-account --key-file=auth.json
+
+.upload: &upload |
+  gsutil -m rsync -r -d dist gs://$BUCKET
+  gsutil -m setmeta -r -h "Cache-Control: public, max-age=31536000" gs://$BUCKET/img/*
+  gsutil -m setmeta -r -h "Cache-Control: public, max-age=31536000" gs://$BUCKET/**/*js
+
 pipelines:
   default:
     - step:
         name: Stage
         script:
-          - | # setup NVM and Yarn environment
-            export DEBIAN_FRONTEND=noninteractive
-            apt update; apt install -y curl
-            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-            source ~/.bashrc || true
-            nvm install
-            curl -o- -L https://yarnpkg.com/install.sh | bash
-            source ~/.bashrc
-          - | # Setup gcloud auth
-            echo $CORP_STATIC_AUTH > auth.json
-            export GOOGLE_APPLICATION_CREDENTIALS=auth.json
-            gcloud auth activate-service-account --key-file=auth.json
+          - *setupTools
+          - *setupAuth
+          - export BUCKET=stage-site.medici.io
           - yarn
           - yarn stage
-          - gsutil -m rsync -r -d dist gs://stage-site.medici.io
+          - *upload
+  branches:
+    master:
+      - step:
+          name: Stage
+          script:
+            - *setupTools
+            - *setupAuth
+            - export BUCKET=stage-site.medici.io
+            - yarn
+            - yarn stage
+            - *upload
+      - step:
+          name: Stage
+          script:
+            - *setupTools
+            - *setupAuth
+            - export BUCKET=mediciventures.com
+            - yarn
+            - yarn build
+            - *upload
