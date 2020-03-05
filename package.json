@@ -6,7 +6,9 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "analyze": "react-static build --analyze",
-    "serve": "serve dist -p 3000"
+    "serve": "serve dist -p 3000",
+    "deploy:stage": "firebase deploy --only hosting:stage",
+    "deploy:prod": "firebase deploy --only hosting:prod"
   },
   "author": "Steve Anderson <steve.anderson@mediciventures.com>",
   "dependencies": {

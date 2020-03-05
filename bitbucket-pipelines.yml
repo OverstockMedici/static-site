@@ -14,11 +14,6 @@ image: google/cloud-sdk:282.0.0
   export GOOGLE_APPLICATION_CREDENTIALS=auth.json
   gcloud auth activate-service-account --key-file=auth.json
 
-.upload: &upload |
-  gsutil -m rsync -r -d dist gs://$BUCKET
-  gsutil -m setmeta -r -h "Cache-Control: public, max-age=31536000" gs://$BUCKET/img/*
-  gsutil -m setmeta -r -h "Cache-Control: public, max-age=31536000" gs://$BUCKET/**/*js
-
 pipelines:
   default:
     - step:
@@ -26,10 +21,9 @@ pipelines:
         script:
           - *setupTools
           - *setupAuth
-          - export BUCKET=stage-site.medici.io
           - yarn
           - yarn stage
-          - *upload
+          - yarn deploy:stage
   branches:
     master:
       - step:
@@ -37,17 +31,15 @@ pipelines:
           script:
             - *setupTools
             - *setupAuth
-            - export BUCKET=stage-site.medici.io
             - yarn
             - yarn stage
-            - *upload
+            - yarn deploy:stage
       - step:
           name: Prod
           trigger: manual
           script:
             - *setupTools
             - *setupAuth
-            - export BUCKET=www.mediciventures.com
             - yarn
             - yarn build
-            - *upload
+            - yarn deploy:prod
