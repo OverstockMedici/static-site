@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { colors } from '../../style/colors';
 
-const heroImgSm = 'img/home-landing-small.png';
-const heroImgMd = 'img/home-landing-medium.png';
-const heroImgLg = 'img/home-landing-large.png';
-// const downArrow = 'img/arrow-down-green.png';
+const heroImgSm = 'img/home-landing-small.jpg';
+const heroImgMd = 'img/home-landing-medium.jpg';
+const heroImgLg = 'img/home-landing-large.jpg';
 const arrowDown = 'img/arrow-down.png';
 const homeBlocks2 = 'img/home-blocks-2.png';
 const homeBlocks3 = 'img/home-blocks-3.png';
