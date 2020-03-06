@@ -38,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "extract-css-chunks-webpack-plugin": "4.6.0",
+    "firebase-tools": "^7.14.0",
     "serve": "^11.1.0"
   }
 }
