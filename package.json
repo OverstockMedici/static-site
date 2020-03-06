@@ -11,6 +11,9 @@
     "deploy:prod": "firebase deploy --only hosting:prod"
   },
   "author": "Steve Anderson <steve.anderson@mediciventures.com>",
+  "resolutions": {
+    "react-static/webpack-dev-server": "3.2.1"
+  },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "dayjs": "^1.8.20",
