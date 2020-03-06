@@ -33,20 +33,36 @@ export const content = {
             color: '#5dc55f'
         },
         {
+            name: 'GrainChain',
+            description: 'GrainChain\'s innovative platform can facilitate prompt payment to suppliers and farmers, and the immediate availability of tradable commodities to buyers.',
+            link: 'https://www.grainchain.io/',
+            linkText: 'GrainChain.io',
+            image: 'img/grain-chain-comp-logo.png',
+            color: '#3db54b'
+        },
+        {
+            name: 'Voatz',
+            description: 'The minds behind Voatz intend to redefine how the world votes by replacing long lines and outdated voting systems with everyday smart devices with biometric ID and blockchain irrefutability to provide accurate and tamper free voting.',
+            link: 'https://voatz.com/',
+            linkText: 'Voatz.com',
+            image: 'img/voatz-comp-logo.png',
+            color: '#0065a8'
+        },
+        {
+            name: 'Evernym',
+            description: 'Evernym has a revolutionary new digital identity solution that will reduce costs, transform customer experiences, and outperform competitors.',
+            link: 'https://www.evernym.com/',
+            linkText: 'Evernym.com',
+            image: 'img/evernym-logo-small.png',
+            color: '#86c044'
+        },
+        {
             name: 'SettleMint',
             description: 'The enthusiastic team at SettleMint has created a platform which will help you integrate blockchain technologies into your business by providing solutions for nearly every business use-case.',
             link: 'https://settlemint.com/',
             linkText: 'SettleMint.com',
             image: 'img/settlemint-comp-logo.svg',
             color: '#31bcb5'
-        },
-        {
-            name: 'Factom',
-            description: 'Factom has created a breakthrough authentication solution that lets you secure physical documents on the Blockchain helping create, organize, and report documents proofs, data, decisions and activities within your organization.',
-            link: 'https://www.factom.com/',
-            linkText: 'Factom.com',
-            image: 'img/factom-comp-logo.svg',
-            color: '#f1ba13'
         },
         {
             name: 'Ripio',
@@ -63,15 +79,7 @@ export const content = {
             linkText: 'spera.io',
             image: 'img/spera-comp-logo.png',
             color: '#00486a'
-        },
-        {
-            name: 'Symbiont',
-            description: 'Symbiont Smart Securities® technology provides institutions with a unified ledger for sharing business logic and market data through immutable blockchain technology.',
-            link: 'https://symbiont.io/',
-            linkText: 'symbiont.io',
-            image: 'img/symbiont-comp-logo.png',
-            color: '#ff6000'
-        },
+        },       
         {
             name: 'PeerNova',
             description: 'Founded in 2013 by experts in blockchain, big data, and financial infrastructure, PeerNova’s platform simplifies processes and guarantees data integrity across systems.',
@@ -79,14 +87,6 @@ export const content = {
             linkText: 'PEERNOVA.com',
             image: 'img/peernova-comp-logo.png',
             color: '#552eff'
-        },
-        {
-            name: 'Voatz',
-            description: 'The minds behind Voatz intend to redefine how the world votes by replacing long lines and outdated voting systems with everyday smart devices with biometric ID and blockchain irrefutability to provide accurate and tamper free voting.',
-            link: 'https://voatz.com/',
-            linkText: 'Voatz.com',
-            image: 'img/voatz-comp-logo.png',
-            color: '#0065a8'
         },
         {
             name: 'Finclusive',
@@ -121,12 +121,20 @@ export const content = {
             color: '#e74d59'
         },
         {
-            name: 'Evernym',
-            description: 'Evernym has a revolutionary new digital identity solution that will reduce costs, transform customer experiences, and outperform competitors.',
-            link: 'https://www.evernym.com/',
-            linkText: 'Evernym.com',
-            image: 'img/evernym-logo-small.png',
-            color: '#86c044'
+            name: 'Symbiont',
+            description: 'Symbiont Smart Securities® technology provides institutions with a unified ledger for sharing business logic and market data through immutable blockchain technology.',
+            link: 'https://symbiont.io/',
+            linkText: 'symbiont.io',
+            image: 'img/symbiont-comp-logo.png',
+            color: '#ff6000'
+        },
+        {
+            name: 'Factom',
+            description: 'Factom has created a breakthrough authentication solution that lets you secure physical documents on the Blockchain helping create, organize, and report documents proofs, data, decisions and activities within your organization.',
+            link: 'https://www.factom.com/',
+            linkText: 'Factom.com',
+            image: 'img/factom-comp-logo.svg',
+            color: '#f1ba13'
         },
         {
             name: 'Votem',
@@ -135,14 +143,6 @@ export const content = {
             linkText: 'Votem.com',
             image: 'img/votem-comp-logo.png',
             color: '#032a4a'
-        },
-        {
-            name: 'GrainChain',
-            description: 'GrainChain\'s innovative platform can facilitate prompt payment to suppliers and farmers, and the immediate availability of tradable commodities to buyers.',
-            link: 'https://www.grainchain.io/',
-            linkText: 'GrainChain.io',
-            image: 'img/grain-chain-comp-logo.png',
-            color: '#3db54b'
         }
     ]
 };
