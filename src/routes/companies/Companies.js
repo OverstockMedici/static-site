@@ -27,7 +27,7 @@ export default function Companies() {
                 </Hero>
                 {renderCompanyList()}
                 <ContactUs>
-                    <ButtonLink to="/contact">Contact Us</ButtonLink>
+                    <ButtonLink to="/contact" isMobile={store.isMobile}>Contact Us</ButtonLink>
                 </ContactUs>
             </Main>
         </div>

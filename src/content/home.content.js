@@ -8,7 +8,7 @@ const supplyChain = '/img/supply-chain.png';
 export const meta = {
     title: 'Medici Ventures INC',
     description: 'Medici Ventures is a wholly-owned subsidiary of Overstock.com launched in 2014. Our goal is to change the world by advancing blockchain technology.',
-    image: '/img/home-landing-small.png'
+    image: '/img/home-landing.jpg'
 };
 
 export const home = {

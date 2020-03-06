@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Meta from '../../components/Meta';
 import postData from './contact.post';
 import { HeroImg, H2, Inquiries, MapImg, ContactH2, ContactForm, ServerMsg, Button } from './contact.style';
 import { meta } from '../../content/contact.content';
+import { Context } from '../../store';
 
 const emailServiceUrl = 'https://us-central1-corp-200921.cloudfunctions.net/medici-contact-form-service';
 
@@ -14,6 +15,7 @@ const mapImgSm = '/img/contact-map-600.jpg';
 
 
 export default function Contact() {
+    const { store, dispatch } = useContext(Context);
     const defaultState = {
         error: false,
         serverMsg: '',
@@ -66,8 +68,8 @@ export default function Contact() {
 
     const getButtonContent = () => (
         state.loading ?
-            <Button type="submit" disabled>Submitting</Button> :
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled isMobile={store.isMobile}>Submitting</Button> :
+            <Button type="submit" isMobile={store.isMobile}>Submit</Button>
     );
     // TODO: unit tests
     // TODO: replace fetch with axios or polyfill
