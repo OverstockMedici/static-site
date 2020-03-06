@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import Meta from '../../components/Meta';
 import { Main, Hero, DownButton, Overview, Industries, WhoIs, LearnMore } from './home.style';
 import { ButtonLink } from '../../components/ButtonLink';
 import { home, meta } from '../../content/home.content';
+import { Context } from '../../store';
 
 const advancingBlockchainTechnology = 'img/ABT.svg';
 const peaceColiseum = 'img/peace-coliseum.png';
@@ -20,6 +21,7 @@ const courtyard870 = 'img/peace-coliseum-courtyard-870.jpg';
 const courtyardFull = 'img/peace-coliseum-courtyard-589-full.jpg';
 
 export default function Home() {
+    const { store, dispatch } = useContext(Context);
     const [overviewAnimation, setOverviewAnimation] = useState(false);
     const [industriesAnimation, setIndustriesAnimation] = useState(false);
 
@@ -139,7 +141,7 @@ export default function Home() {
                     </div>
                 </WhoIs>
                 <LearnMore>
-                    <ButtonLink to="/companies">Learn More</ButtonLink>
+                    <ButtonLink to="/companies" isMobile={store.isMobile}>Learn More</ButtonLink>
                 </LearnMore>
             </Main>
         </div>

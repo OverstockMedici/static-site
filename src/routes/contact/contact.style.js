@@ -194,8 +194,10 @@ export const Button = styled.button`
     text-decoration: none;
     transition: .25s ease;
 
-    &:hover {
-        color: black;
-        background-color: #dce0d4;
+    ${props => !props.isMobile &&
+        `&:hover {
+            color: black;
+            background-color: #dce0d4;
+        }`
     }
 `;

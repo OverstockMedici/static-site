@@ -16,10 +16,13 @@ export const ButtonLink = styled(Link)`
     text-decoration: none;
     transition: .25s ease;
 
-    &:hover {
-        color: black;
-        background-color: ${colors.off_white};
+    ${props => !props.isMobile &&
+        `&:hover {
+            color: black;
+            background-color: ${colors.off_white};
+        }`
     }
+
 `;
 
 export const ButtonLinkReversed = styled(ButtonLink)`
@@ -27,7 +30,10 @@ export const ButtonLinkReversed = styled(ButtonLink)`
     border-color: white;
     color: white;
 
-    &:hover {
-        border-color: black;
+    ${props => !props.isMobile &&
+        `&:hover {
+            border-color: black;
+        }`
     }
+
 `;
