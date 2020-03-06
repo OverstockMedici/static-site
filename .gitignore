@@ -2,3 +2,4 @@ node_modules
 artifacts
 tmp
 dist
+.DS_Store

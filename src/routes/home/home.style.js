@@ -143,7 +143,7 @@ export const Industries = styled.section`
     background-image: -o-radial-gradient(50% 67%, ellipse, #526041, #1b260c 54%, #0c1501);
     background-image: radial-gradient(ellipse at 50% 67%, #526041, #1b260c 54%, #0c1501);
     color: ${colors.white};
-    padding: 30px 30px 70px 30px;
+    padding: 30px 30px 0 30px;
     z-index:150;
 
     h2 {
@@ -163,6 +163,7 @@ export const Industries = styled.section`
             max-width: 110px;
             text-align: center;
             align-self: center;
+            margin-bottom: 75px;
         }
     }
 
