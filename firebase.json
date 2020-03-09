@@ -1,34 +1,50 @@
 {
-    "hosting": [
-      {
-        "target": "stage",
-        "public": "dist",
-        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-        "trailingSlash": false,
-        "headers": [
-          {
-            "source" : "**/*.@(jpg|jpeg|gif|png|svg|css|js)",
-            "headers" : [ {
-                "key" : "Cache-Control",
-                "value" : "max-age=31536000"
-            } ]
-          }
-        ]
-      },
-      {
-        "target": "prod",
-        "public": "dist",
-        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-        "trailingSlash": false,
-        "headers": [
-          {
-            "source" : "**/*.@(jpg|jpeg|gif|png|svg|css|js)",
-            "headers" : [ {
-                "key" : "Cache-Control",
-                "value" : "max-age=31536000"
-            } ]
-          }
-        ]
-      }
-    ]
+  "hosting": [
+    {
+      "target": "stage",
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "trailingSlash": false,
+      "headers": [
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|css|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "prod",
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "trailingSlash": false,
+      "headers": [
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|css|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
+}

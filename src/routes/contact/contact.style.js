@@ -12,13 +12,13 @@ export const HeroImg = styled.picture`
 export const H2 = styled.h2`
     font-size: 26px;
     font-weight: 500;
-    line-height:1.1;
-    letter-spacing: .4px;
+    line-height: 1.1;
+    letter-spacing: 0.4px;
     margin: 0 0 5px 0;
     text-align: center;
 
-    @media(min-width: 640px){
-        text-align:left;
+    @media (min-width: 640px) {
+        text-align: left;
     }
 `;
 
@@ -29,20 +29,19 @@ export const Inquiries = styled.section`
         margin: 40px 0 25px 0;
     }
 
-
     p {
         color: #0b1500;
         font-size: 20px;
         font-weight: 200;
         line-height: normal;
-        letter-spacing: .3px;
+        letter-spacing: 0.3px;
         margin: 0;
     }
 
-    @media(min-width: 640px){
+    @media (min-width: 640px) {
         text-align: left;
 
-        .inquiries-data{
+        .inquiries-data {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -55,7 +54,7 @@ export const Inquiries = styled.section`
         }
     }
 
-    @media(min-width: 840px) {
+    @media (min-width: 840px) {
         display: flex;
         justify-content: space-between;
         text-align: left;
@@ -73,7 +72,7 @@ export const Inquiries = styled.section`
             align-items: center;
         }
 
-        .inquiries-data{
+        .inquiries-data {
             padding: 1rem 60px;
             align-items: center;
         }
@@ -102,10 +101,10 @@ export const MapImg = styled.picture`
 
 export const ContactH2 = styled(H2)`
     margin-top: 25px;
-    text-align:center;
+    text-align: center;
 
-    @media(min-width: 640px){
-        text-align:center;
+    @media (min-width: 640px) {
+        text-align: center;
     }
 `;
 
@@ -131,19 +130,21 @@ export const ContactForm = styled.form`
         input {
             margin-bottom: 6px;
         }
-        
+
         label.sub-label {
             color: #525252;
             font-size: 12px;
             margin-bottom: 25px;
         }
     }
-    legend, label {
+    legend,
+    label {
         display: block;
         font-size: 17px;
         margin-bottom: 6px;
     }
-    input, textarea {
+    input,
+    textarea {
         border: solid 1px #dce0d4;
         background: #fafafa;
         color: #000;
@@ -157,7 +158,7 @@ export const ContactForm = styled.form`
         height: 100px;
     }
 
-    @media(min-width:640px) {
+    @media (min-width: 640px) {
         label.sub-label {
             display: inline-block;
             width: calc(50% - 5px);
@@ -168,7 +169,7 @@ export const ContactForm = styled.form`
         }
 
         padding: 35px 100px;
-        max-width: 970px
+        max-width: 970px;
     }
 `;
 
@@ -186,18 +187,24 @@ export const Button = styled.button`
     display: block;
     font-size: 24px;
     font-weight: 400;
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     margin: 0 auto;
     margin-top: 15px;
     min-width: 250px;
     padding: 28px 52px;
     text-decoration: none;
-    transition: .25s ease;
+    transition: 0.25s ease;
 
-    ${props => !props.isMobile &&
+    ${props =>
+        !props.isMobile &&
         `&:hover {
             color: black;
             background-color: #dce0d4;
-        }`
-    }
+        }`}
+`;
+
+export const ErrorMessage = styled.div`
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
 `;
