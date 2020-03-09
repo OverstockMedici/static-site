@@ -58,7 +58,9 @@ export default function Contact() {
                 formErrorMsg: 'Incorrect email format',
                 loading: false,
             });
+            return false;
         }
+        return true;
     };
 
     const handleSubmit = e => {
@@ -68,7 +70,9 @@ export default function Contact() {
             loading: true,
         });
 
-        formValidation(formData);
+        const isValid = formValidation(formData);
+        if (!isValid) return;
+        console.log('POST');
         postData(emailServiceUrl, formData)
             .then(res => res.json())
             .then(response => {
