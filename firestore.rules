@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /news/{newsId} {
+      function isValidRequest () {
+      return request.auth!=null && 
+        request.resource.data.title != null && 
+        request.resource.data.imageURL != null && 
+        request.resource.data.link != null && 
+        request.resource.data.createdAt != null && 
+        request.resource.data.paragraphs != null
+      }
+      
+      allow read;
+      allow create: if isValidRequest();
+      allow update: if isValidRequest();
+      allow delete: if request.auth != null
+    }
+    
+    match /jobs/{jobsId} {
+      allow read;
+    }
+  }
+}

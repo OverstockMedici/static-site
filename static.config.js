@@ -1,14 +1,20 @@
 import path from 'path';
-import admin from 'firebase-admin';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import React from 'react';
 
 const initialize = async () => {
-    if (admin.apps.length === 0) {
-        admin.initializeApp({
-            credential: admin.credential.applicationDefault(),
-            databaseURL: 'https://corp-200921.firebaseio.com',
-        });
-    }
+    const firebaseConfig = {
+        apiKey: 'AIzaSyB1z7dcqRkxOmCBnYPKBeB9Sgg5NeSp_90',
+        authDomain: 'corp-200921.firebaseapp.com',
+        databaseURL: 'https://corp-200921.firebaseio.com',
+        projectId: 'corp-200921',
+        storageBucket: 'corp-200921.appspot.com',
+        messagingSenderId: '271841444124',
+        appId: '1:271841444124:web:b8fc658393f1e0fd847ad9',
+    };
+
+    firebase.initializeApp(firebaseConfig);
 };
 
 export default {
@@ -16,7 +22,7 @@ export default {
     stagingSiteRoot: '/',
     getRoutes: async () => {
         await initialize();
-        const db = admin.firestore();
+        const db = firebase.firestore();
         const news = await db
             .collection('news')
             .orderBy('createdAt', 'desc')
@@ -83,7 +89,13 @@ export default {
             },
         ];
     },
-    Document: ({ Html, Head, Body, children, state: { routeInfo, renderMeta, inlineScripts } }) => {
+    Document: ({
+        Html,
+        Head,
+        Body,
+        children,
+        state: { routeInfo, renderMeta, inlineScripts },
+    }) => {
         const logo = '/img/medici-ventures-logo.png';
         const domain = 'https://www.mediciventures.com';
         const gTag = `
@@ -126,12 +138,28 @@ export default {
             <Html lang="en-US">
                 <Head>
                     <meta charSet="UTF-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-                    <link rel="preconnect" href="https://www.google-analytics.com" />
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145816993-1"></script>
-                    <script dangerouslySetInnerHTML={{__html: gTag}} />
-                    <script type="application/ld+json" dangerouslySetInnerHTML={{__html: jsonLd}} />
+                    <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1"
+                    />
+                    <link
+                        rel="shortcut icon"
+                        type="image/x-icon"
+                        href="img/favicon.ico"
+                    />
+                    <link
+                        rel="preconnect"
+                        href="https://www.google-analytics.com"
+                    />
+                    <script
+                        async
+                        src="https://www.googletagmanager.com/gtag/js?id=UA-145816993-1"
+                    ></script>
+                    <script dangerouslySetInnerHTML={{ __html: gTag }} />
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: jsonLd }}
+                    />
                 </Head>
                 <Body>{children}</Body>
             </Html>
