@@ -72,7 +72,7 @@ export default function Contact() {
 
         const isValid = formValidation(formData);
         if (!isValid) return;
-        console.log('POST');
+
         postData(emailServiceUrl, formData)
             .then(res => res.json())
             .then(response => {
