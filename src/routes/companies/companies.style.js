@@ -8,10 +8,9 @@ const coliseumLg = 'img/companies-coliseum-entrance-950.jpg';
 const coliseumXL = 'img/companies-coliseum-entrance-1200.jpg';
 const coliseumXXL = 'img/companies-coliseum-entrance-1600.jpg';
 
-
 export const Main = styled.main`
-    background: url(${homeBlocks2}) bottom right no-repeat, url(${homeBlocks3}) bottom left no-repeat;
-    background-size: 237px 209px, 94px 94px;
+    background: url(${homeBlocks2}) bottom right no-repeat,
+        url(${homeBlocks3}) bottom left no-repeat;
     padding-bottom: 50px;
 `;
 
@@ -21,16 +20,15 @@ export const Hero = styled.section`
     color: white;
     letter-spacing: 0.5px;
     line-height: normal;
-    max-width: 1700px;
     margin: 0 auto;
     min-height: 430px;
     padding: 60px;
-    
+
     h1 {
         font-size: 22px;
         font-weight: 500;
         text-align: center;
-        text-shadow: #1C2411 0px 0px 20px;
+        text-shadow: #1c2411 0px 0px 20px;
 
         span {
             font-weight: 600;
@@ -68,7 +66,6 @@ export const CompanyList = styled.section`
     & div {
         border-bottom: solid 0.5px #b0b0b0;
         background-color: #f3f4f1;
-
     }
     img {
         display: block;
@@ -80,17 +77,17 @@ export const CompanyList = styled.section`
     }
     .company-description {
         background: rgb(63, 62, 62);
-        box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, .15);
+        box-shadow: inset 0px 0px 15px 8px rgba(0, 0, 0, 0.15);
         color: #fff;
         line-height: 1.2em;
         max-height: 0;
         overflow: hidden;
         padding: 0 25px;
         position: relative;
-        transition: all .4s ease-in-out;
+        transition: all 0.4s ease-in-out;
 
         &:after {
-            content: "";
+            content: '';
             width: 0;
             height: 0;
             border-left: 8px solid transparent;
@@ -100,9 +97,8 @@ export const CompanyList = styled.section`
             top: 15px;
             left: calc(50% - 8px);
             transform: rotate(180deg);
-            transition: transform .4s ease-in-out;
+            transition: transform 0.4s ease-in-out;
         }
-        
     }
     .open {
         .company-description {
@@ -117,7 +113,7 @@ export const CompanyList = styled.section`
 `;
 
 export const CompanyListDesktop = styled.section`
-    background-image: linear-gradient(to bottom, #eceee9, #ffffff);    
+    background-image: linear-gradient(to bottom, #eceee9, #ffffff);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -140,9 +136,9 @@ export const CompanyListDesktop = styled.section`
         flex-flow: row wrap;
         justify-content: center;
     }
-    
+
     a {
-        align-items: center;        
+        align-items: center;
         background-color: white;
         display: flex;
         height: 161px;
@@ -172,8 +168,10 @@ export const CompanyListDesktop = styled.section`
         position: absolute;
         text-align: center;
         top: -5px;
-        transform: translateZ(0); /* to account for opacity transition bug that causes some images not to render */
-        transition: opacity .25s ease-in-out;
+        transform: translateZ(
+            0
+        ); /* to account for opacity transition bug that causes some images not to render */
+        transition: opacity 0.25s ease-in-out;
         width: 100%;
     }
 
