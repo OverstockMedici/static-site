@@ -55,6 +55,7 @@ export default function Contact() {
         const isCorrectEmailFormat = isEmail(formObject.email);
         if (!isCorrectEmailFormat) {
             setState({
+                ...state,
                 formErrorMsg: 'Incorrect email format',
                 loading: false,
             });
