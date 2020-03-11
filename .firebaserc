@@ -9,7 +9,7 @@
           "medici-static-stage"
         ],
         "prod": [
-          "medici-static-stage"
+          "medici-static"
         ]
       }
     }
