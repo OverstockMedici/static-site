@@ -65,7 +65,9 @@ export default function Team() {
                     <div id="particles-foreground" />
                     <HeroContent>
                         <Blockquote>
-                            &quot;We believe changing the world takes amazing people, not just technology, and our employees are our greatest strength.&quot;
+                            &quot;We believe changing the world takes amazing
+                            people, not just technology, and our employees are
+                            our greatest strength.&quot;
                         </Blockquote>
                         <Cite>- Medici Ventures Core Values</Cite>
                         <ButtonLinkReversed to={pdfPath} onClick={handlePdfDownload}>Our Core Values</ButtonLinkReversed>

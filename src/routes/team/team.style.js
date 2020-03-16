@@ -41,8 +41,12 @@ export const Blockquote = styled.blockquote`
     letter-spacing: -.2px;
     text-align: center;
     color: #fff;
-    width: 100%;
-    margin: 0;
+    width: 60%;
+    margin: 0 auto;
+
+    @media (max-width: 1000px) {
+        width: 100%;
+    }
 
     @media (min-width: 640px) {
         font-size: 36px;
@@ -122,7 +126,7 @@ export const TeamList = styled.section`
 
     @media(min-width: 900px) {
         figure {
-            width: 25%;
+            width: 33.33%;
 
             figcaption  {
                 padding: 1rem 0.5rem;
@@ -156,7 +160,7 @@ export const TeamList = styled.section`
 
     @media(min-width: 1440px) {
         figure {
-            width: 25%;
+            width: 20%;
         }
 
         .employee-name {
