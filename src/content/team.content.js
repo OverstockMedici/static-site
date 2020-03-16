@@ -29,7 +29,13 @@ export const content = {
             title: 'Controller',
             info: 'Previous: Overstock.com, The Color Run, Armanino LLP',
             image: '/img/tiffany-smith-640.jpg'
-        }
+        },
+        {
+            name: 'Alexis Callahan',
+            title: 'Director of Investor Relations',
+            info: 'Previous: D.A. Davidson, Zions Bancorp, Eli Global',
+            image: '/img/alexis-callahan-640.jpg',
+        },
     ],
     jobListings: [
         {
