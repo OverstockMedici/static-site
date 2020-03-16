@@ -6,7 +6,7 @@ export const meta = {
 };
 
 export const content = {
-    heading1: 'Medici Ventures Portfolio Companies:',
+    heading1: 'Medici Ventures Companies:',
     heading1b: 'Harnessing the World-Changing Power of Blockchain',
     companies: [
         {
