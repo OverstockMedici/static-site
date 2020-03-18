@@ -69,7 +69,7 @@ export const content = {
                 'The enthusiastic team at SettleMint has created a platform which will help you integrate blockchain technologies into your business by providing solutions for nearly every business use-case.',
             link: 'https://settlemint.com/',
             linkText: 'SettleMint.com',
-            image: 'img/settlemint-comp-logo.svg',
+            image: 'img/settlemint-comp-logo.png',
             color: '#31bcb5',
         },
         {
