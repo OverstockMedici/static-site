@@ -30,3 +30,4 @@ _Details coming_...
 * [Medici Contact Form Service](https://bitbucket.org/mediciventures/medici-contact-form-service/src/master/)
 * [Medici Jobs Updater](https://bitbucket.org/mediciventures/medici-jobs-updater/src/master/)
 * [Medici Site CMS](https://gitlab.com/mediciventures/medici-site-cms)
+* [Medici Database Change Listener](https://bitbucket.org/mediciventures/medici-trigger-static-page-deploy/src/master/)
