@@ -19,7 +19,7 @@ export const content = {
             image: '/img/jeremy-smith-640.jpg'
         },
         {
-            name: 'Stanton Hunington',
+            name: 'Stanton Huntington',
             title: 'General Counsel',
             info: 'Previous: Overstock.com, ProPay Inc., Kennecott Utah Copper Corp.',
             image: '/img/stanton-hunington-640.jpg'
