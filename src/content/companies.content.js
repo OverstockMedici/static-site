@@ -79,7 +79,7 @@ export const content = {
             link: 'https://www.ripio.com/en/',
             linkText: 'ripio.com',
             image: 'img/ripio-comp-logo.png',
-            color: '#0066b9',
+            color: '#840BF8',
         },
         {
             name: 'Spera',
