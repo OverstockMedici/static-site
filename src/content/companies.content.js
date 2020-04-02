@@ -162,5 +162,14 @@ export const content = {
             image: 'img/votem-comp-logo.png',
             color: '#032a4a',
         },
+          {
+            name: 'Vital Chain',
+            description:
+                "Vital Chain is working to end the reliance on legacy paper-based systems for birth and death certificate management. They are reducing the paperwork burden for medical professionals while making the process more secure.",
+            link: 'https://www.vitalchain.com/',
+            linkText: 'Vitalchain.com',
+            image: 'img/vital-chain.png',
+            color: '#19c82a',
+        },
     ],
 };
