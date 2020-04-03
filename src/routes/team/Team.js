@@ -3,13 +3,14 @@ import Particle from 'particleground-light';
 import Meta from '../../components/Meta';
 import { Link } from 'components/Router';
 import { ButtonLinkReversed } from '../../components/ButtonLink';
-import { Hero, HeroContent, Blockquote, Cite, TeamList, JobListings, StyledArrow } from './team.style';
+import { Hero, HeroContent, Blockquote, Cite, TeamList, JobListings } from './team.style';
 import { foregroundOptions, backgroundOptions } from './team.particleground';
 import { content, meta } from '../../content/team.content';
+import TeamCard from './TeamCard.js';
+import ListingsRow from './ListingsRow';
 import { useRouteData } from 'react-static';
 
 const { team } = content;
-const arrowRight = '/img/arrow-right-green.png';
 
 export default function Team() {
     useEffect(() => {
@@ -30,30 +31,13 @@ export default function Team() {
         e.preventDefault();
         window.open(pdfPath);
     };
-    const buildTeam = () => (
-        team.map(employee => (
-            <figure key={employee.name}>
-                <img src={employee.image} alt={employee.name} />
-                <figcaption>
-                    <div className="employee-name">{employee.name}</div>
-                    <div className="employee-title">/ {employee.title}</div>
-                    <div className="employee-info">{employee.info}</div>
-                </figcaption>
-            </figure>
-        ))
-    );
 
+    const buildTeam = () => (
+        team.map(({name, image, title, info}) => <TeamCard key={name} {...{ name, image, title, info }} />)
+    );
+    
     const buildListings = () => (
-        jobs.map(listing => (
-            <div key={listing.title} className="job-listing">
-                <a href={listing.url} target="_blank" rel="noopener noreferrer"><h3>{listing.title}</h3></a>
-                <div className="job-description">
-                    <a href={listing.url} title="Read Full Job Description" target="_blank" rel="noopener noreferrer">
-                        <StyledArrow src={arrowRight} alt="View Job" />
-                    </a>
-                </div>
-            </div>
-        ))
+        jobs.map(({title, url}) => <ListingsRow key={title} {...{ title, url }} />)
     );
 
     return (

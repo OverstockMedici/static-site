@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<figure
+  data-testid="team-card"
+>
+  <img
+    alt="Jonathan Johnson"
+  />
+  <figcaption>
+    <div
+      className="employee-name"
+    >
+      Jonathan Johnson
+    </div>
+    <div
+      className="employee-title"
+    >
+      / 
+      Cool Guy
+    </div>
+    <div
+      className="employee-info"
+    >
+      Does cool things
+    </div>
+  </figcaption>
+</figure>
+`;
