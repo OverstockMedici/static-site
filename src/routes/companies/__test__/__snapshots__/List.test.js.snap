@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<a
+  data-testid="list"
+  href="https://stripe.com/"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <img
+    alt="Stripe logo"
+    src="https://stripe.com/img/v3/home/social.png/"
+  />
+  <div
+    className="company-description"
+    data-testid="list-style"
+    style={
+      Object {
+        "borderColor": "#5160ff",
+      }
+    }
+  >
+    Stripe makes it easy to perform online financial transactions, processing billions of dollars a year for thousands of businesses
+  </div>
+</a>
+`;
