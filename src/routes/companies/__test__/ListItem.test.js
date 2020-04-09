@@ -5,6 +5,8 @@ import ListItem from './../ListItem';
 import { render, cleanup } from '@testing-library/react';
 import { getByAltText } from '@testing-library/dom';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 const listItemProps = {
@@ -36,7 +38,9 @@ it('renders ListItem correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const listItemTree = render(<ListItem {...{ link, name, image, color, description }} />);
+    const listItemTree = renderer
+        .create(<ListItem {...{ link, name, image, color, description }} />)
+        .toJSON();
 
-    expect(listItemTree.firstChild).toMatchSnapshot();
+    expect(listItemTree).toMatchSnapshot();
 });

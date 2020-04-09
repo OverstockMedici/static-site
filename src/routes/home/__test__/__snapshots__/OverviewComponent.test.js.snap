@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`matches snapshot 1`] = `undefined`;
+exports[`matches snapshot 1`] = `
+<div
+  className="overview-1"
+  data-testid="overview"
+>
+  <h2>
+    Democratize Capital
+  </h2>
+  <p>
+    lorem ipsum
+  </p>
+</div>
+`;

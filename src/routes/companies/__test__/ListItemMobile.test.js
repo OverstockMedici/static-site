@@ -5,6 +5,8 @@ import ListItemMobile from './../ListItemMobile';
 import { render, cleanup } from '@testing-library/react';
 import { getByAltText } from '@testing-library/dom';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 const listItemMobileProps = {
@@ -36,11 +38,13 @@ it('renders List correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const listItemMobileTree = render(
+    const listItemMobileTree = renderer
+        .create(
             <ListItemMobile
                 {...{ link, name, image, color, description, linkText }}
             />,
-        );
+        )
+        .toJSON();
 
-    expect(listItemMobileTree.firstChild).toMatchSnapshot();
+    expect(listItemMobileTree).toMatchSnapshot();
 });

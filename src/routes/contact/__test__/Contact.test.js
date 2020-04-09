@@ -12,6 +12,8 @@ import { Context, reducer, initialState } from '../../../store';
 import reducerMiddleware from '../../../reducerMiddleware';
 import Contact from '../Contact';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 const reducerState =
@@ -69,12 +71,12 @@ describe('Contact page logic', () => {
     });
 
     it('matches snapshot', () => {
-        const contactTree = render(
+        const contactTree = renderer.create(
             <RenderContextAndRoutes>
                 <Contact path="/" />
             </RenderContextAndRoutes>,
-        );
+        ).toJSON();
 
-        expect(contactTree.firstChild).toMatchSnapshot();
+        expect(contactTree).toMatchSnapshot();
     });
 });

@@ -6,6 +6,8 @@ import ArticleListItem from './../ArticleListItem';
 import { render, cleanup } from '@testing-library/react';
 import { getByAltText } from '@testing-library/dom';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 const listProps = {
@@ -48,11 +50,11 @@ it('renders ArticleList correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const articleListTree = render(
+    const articleListTree = renderer.create(
         <ArticleListItem
             {...{ id, link, imageURL, title, createdAt, paragraphs }}
         />,
-    );
+    ).toJSON();
 
-    expect(articleListTree.firstChild).toMatchSnapshot();
+    expect(articleListTree).toMatchSnapshot();
 });

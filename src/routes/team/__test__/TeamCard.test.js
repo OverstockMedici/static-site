@@ -4,6 +4,8 @@ import TeamCard from './../TeamCard';
 
 import { render, cleanup } from '@testing-library/react';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 it('renders without crashing', () => {
@@ -25,13 +27,15 @@ it('renders TeamCard correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const teamCardTree = render(
+    const teamCardTree = renderer
+        .create(
             <TeamCard
                 name="Jonathan Johnson"
                 title="Cool Guy"
                 info="Does cool things"
             />,
-        );
+        )
+        .toJSON();
 
-    expect(teamCardTree.firstChild).toMatchSnapshot();
+    expect(teamCardTree).toMatchSnapshot();
 });

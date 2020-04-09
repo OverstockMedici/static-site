@@ -4,6 +4,8 @@ import OverviewComponent from './../OverviewComponent';
 
 import { render, cleanup } from '@testing-library/react';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 it('renders without crashing', () => {
@@ -25,13 +27,15 @@ it('renders OverviewComponent correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const overviewTree = render(
-        <OverviewComponent
-            heading="Democratize Capital"
-            content="lorem ipsum"
-            styleName="overview-1"
-        />,
-    );
+    const overviewTree = renderer
+        .create(
+            <OverviewComponent
+                heading="Democratize Capital"
+                content="lorem ipsum"
+                styleName="overview-1"
+            />,
+        )
+        .toJSON();
 
-    expect(overviewTree.firstChild).toMatchSnapshot();
+    expect(overviewTree).toMatchSnapshot();
 });

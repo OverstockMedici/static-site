@@ -4,6 +4,8 @@ import ListingsRow from './../ListingsRow';
 
 import { render, cleanup } from '@testing-library/react';
 
+import renderer from 'react-test-renderer';
+
 afterEach(cleanup);
 
 it('renders without crashing', () => {
@@ -25,12 +27,14 @@ it('renders ListingsRow correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const listingsRowTree = render(
+    const listingsRowTree = renderer
+        .create(
             <ListingsRow
                 title="Pro Esports Player"
                 url="https://www.fnatic.com/"
             />,
-        );
+        )
+        .toJSON();
 
-    expect(listingsRowTree.firstChild).toMatchSnapshot();
+    expect(listingsRowTree).toMatchSnapshot();
 });
