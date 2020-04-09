@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListMobile = ({
+const ListItemMobile = ({
     link,
     name,
     image,
@@ -32,4 +32,4 @@ const ListMobile = ({
     );
 };
 
-export default ListMobile;
+export default ListItemMobile;

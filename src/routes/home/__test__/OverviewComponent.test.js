@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import OverviewComponent from './../OverviewComponent';
 
 import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-
-import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
@@ -28,15 +25,13 @@ it('renders OverviewComponent correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const overviewTree = renderer
-        .create(
-            <OverviewComponent
-                heading="Democratize Capital"
-                content="lorem ipsum"
-                styleName="overview-1"
-            />,
-        )
-        .toJSON();
+    const overviewTree = render(
+        <OverviewComponent
+            heading="Democratize Capital"
+            content="lorem ipsum"
+            styleName="overview-1"
+        />,
+    );
 
-    expect(overviewTree).toMatchSnapshot();
+    expect(overviewTree.firstChild).toMatchSnapshot();
 });

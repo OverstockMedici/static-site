@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { Article } from './news.style';
 
-const ArticleList = ({ link, imageURL, title, createdAt, paragraphs }) => {
+const ArticleListItem = ({ link, imageURL, title, createdAt, paragraphs }) => {
     const buildParagraphs = (paragraphs) =>
         paragraphs.map((paragraph, i) => (
             // eslint-disable-next-line react/no-array-index-key
@@ -40,4 +40,4 @@ const ArticleList = ({ link, imageURL, title, createdAt, paragraphs }) => {
     );
 };
 
-export default ArticleList;
+export default ArticleListItem;

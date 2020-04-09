@@ -1,16 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import List from './../List';
+import ListItem from './../ListItem';
 
 import { render, cleanup } from '@testing-library/react';
 import { getByAltText } from '@testing-library/dom';
-import '@testing-library/jest-dom/extend-expect';
-
-import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
-const listProps = {
+const listItemProps = {
     link: 'https://stripe.com/',
     name: 'Stripe',
     image: 'https://stripe.com/img/v3/home/social.png/',
@@ -18,19 +15,18 @@ const listProps = {
     description:
         'Stripe makes it easy to perform online financial transactions, processing billions of dollars a year for thousands of businesses',
 };
-const { link, name, image, color, description } = listProps;
+const { link, name, image, color, description } = listItemProps;
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<List />, div);
+    ReactDOM.render(<ListItem />, div);
 });
 
-it('renders List correctly', () => {
+it('renders ListItem correctly', () => {
     const { getByTestId, container } = render(
-        <List {...{ link, name, image, color, description }} />,
+        <ListItem {...{ link, name, image, color, description }} />,
     );
 
-    expect(document.querySelector('a').getAttribute('href')).toBe(link);
     const imgMetaData = getByAltText(container, 'Stripe logo');
     const listComponentMetaData = getByTestId('list-style');
 
@@ -40,9 +36,7 @@ it('renders List correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const listTree = renderer
-        .create(<List {...{ link, name, image, color, description }} />)
-        .toJSON();
+    const listItemTree = render(<ListItem {...{ link, name, image, color, description }} />);
 
-    expect(listTree).toMatchSnapshot();
+    expect(listItemTree.firstChild).toMatchSnapshot();
 });

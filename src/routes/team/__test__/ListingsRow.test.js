@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import ListingsRow from './../ListingsRow';
 
 import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-
-import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
@@ -28,14 +25,12 @@ it('renders ListingsRow correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const listingsRowTree = renderer
-        .create(
+    const listingsRowTree = render(
             <ListingsRow
                 title="Pro Esports Player"
                 url="https://www.fnatic.com/"
             />,
-        )
-        .toJSON();
+        );
 
-    expect(listingsRowTree).toMatchSnapshot();
+    expect(listingsRowTree.firstChild).toMatchSnapshot();
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const List = ({ link, name, image, color, description }) => {
+const ListItem = ({ link, name, image, color, description }) => {
     return (
         <a
             data-testid="list"
@@ -20,4 +20,4 @@ const List = ({ link, name, image, color, description }) => {
     );
 };
 
-export default List;
+export default ListItem;

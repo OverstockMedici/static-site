@@ -5,9 +5,7 @@ import { Router, useLocation } from '@reach/router';
 
 import { render, cleanup, fireEvent, waitFor } from '@testing-library/react';
 import { getByAltText } from '@testing-library/dom';
-import '@testing-library/jest-dom/extend-expect';
 
-import renderer from 'react-test-renderer';
 import { renderHook, act } from '@testing-library/react-hooks';
 
 import { Context, reducer, initialState } from '../../../store';
@@ -32,21 +30,19 @@ const { result: reduceResult } = renderHook(() =>
 // I need more time on how to implement a mock request for emails
 
 describe('Contact page logic', () => {
+    const [store, dispatch] = reduceResult.current;
+
+    const RenderContextAndRoutes = ({ children }) => (
+        <Context.Provider value={{ store, dispatch }}>
+            <Router primary={false}>{children}</Router>
+        </Context.Provider>
+    );
+
     test('Should failed with incorrect email format', async () => {
-        const emailServiceUrl =
-            process.env.ENVIRONMENT === 'development'
-                ? 'isDev'
-                : 'https://us-central1-corp-200921.cloudfunctions.net/medici-contact-form-service';
-
-        const [store, dispatch] = reduceResult.current;
-
         const { getByTestId, getByText, debug } = render(
-            <Context.Provider value={{ store, dispatch }}>
-                <Router primary={false}>
-                    <Routes path="*" />
-                    <Contact path="/" />
-                </Router>
-            </Context.Provider>,
+            <RenderContextAndRoutes>
+                <Contact path="/" />
+            </RenderContextAndRoutes>,
         );
 
         const submitButton = getByTestId('submit-button-mobile');
@@ -70,5 +66,15 @@ describe('Contact page logic', () => {
 
         fireEvent.click(submitButton);
         await waitFor(() => getByText('Incorrect email format'));
+    });
+
+    it('matches snapshot', () => {
+        const contactTree = render(
+            <RenderContextAndRoutes>
+                <Contact path="/" />
+            </RenderContextAndRoutes>,
+        );
+
+        expect(contactTree.firstChild).toMatchSnapshot();
     });
 });

@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import dayjs from 'dayjs';
-import ArticleList from './../ArticleList';
+import ArticleListItem from './../ArticleListItem';
 
 import { render, cleanup } from '@testing-library/react';
 import { getByAltText } from '@testing-library/dom';
-import '@testing-library/jest-dom/extend-expect';
-
-import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
@@ -27,7 +24,7 @@ const { id, link, imageURL, title, createdAt, paragraphs } = listProps;
 it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
-        <ArticleList
+        <ArticleListItem
             {...{ id, link, imageURL, title, createdAt, paragraphs }}
         />,
         div,
@@ -36,14 +33,13 @@ it('renders without crashing', () => {
 
 it('renders ArticleList correctly', () => {
     const { getByTestId, container } = render(
-        <ArticleList
+        <ArticleListItem
             {...{ id, link, imageURL, title, createdAt, paragraphs }}
         />,
     );
 
     const articleListComponent = getByTestId('article-list');
 
-    expect(document.querySelector('a').getAttribute('href')).toBe(link);
     expect(articleListComponent).toHaveTextContent(paragraphs[0]);
     expect(articleListComponent).toHaveTextContent(title);
     expect(articleListComponent).toHaveTextContent(
@@ -52,13 +48,11 @@ it('renders ArticleList correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const listTree = renderer
-        .create(
-            <ArticleList
-                {...{ id, link, imageURL, title, createdAt, paragraphs }}
-            />,
-        )
-        .toJSON();
+    const articleListTree = render(
+        <ArticleListItem
+            {...{ id, link, imageURL, title, createdAt, paragraphs }}
+        />,
+    );
 
-    expect(listTree).toMatchSnapshot();
+    expect(articleListTree.firstChild).toMatchSnapshot();
 });

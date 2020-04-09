@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import TeamCard from './../TeamCard';
 
 import { render, cleanup } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-
-import renderer from 'react-test-renderer';
 
 afterEach(cleanup);
 
@@ -28,15 +25,13 @@ it('renders TeamCard correctly', () => {
 });
 
 it('matches snapshot', () => {
-    const teamCardTree = renderer
-        .create(
+    const teamCardTree = render(
             <TeamCard
                 name="Jonathan Johnson"
                 title="Cool Guy"
                 info="Does cool things"
             />,
-        )
-        .toJSON();
+        );
 
-    expect(teamCardTree).toMatchSnapshot();
+    expect(teamCardTree.firstChild).toMatchSnapshot();
 });
