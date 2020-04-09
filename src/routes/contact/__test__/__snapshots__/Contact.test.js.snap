@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact page logic matches snapshot 1`] = `
+<div>
+  <div
+    className="contact"
+  >
+    <main
+      role="main"
+    >
+      <picture
+        className="contactstyle__HeroImg-xs6dfa-0 cQdGrH"
+      >
+        <source
+          media="(min-width: 1200px)"
+          srcSet="/img/coliseum-closeup-1200.jpg"
+        />
+        <source
+          media="(min-width: 900px)"
+          srcSet="/img/coliseum-closeup-900.jpg"
+        />
+        <source
+          media="(max-width: 600px)"
+          srcSet="/img/coliseum-closeup-600.jpg"
+        />
+        <img
+          alt="Peace Coliseum"
+          src="/img/coliseum-closeup-900.jpg"
+        />
+      </picture>
+      <section
+        className="contactstyle__Inquiries-xs6dfa-2 cozDfO"
+      >
+        <div
+          className="inquiries-data"
+        >
+          <div
+            className="inquery-info"
+          >
+            <h2
+              className="contactstyle__H2-xs6dfa-1 icQaWP"
+            >
+              Business Inquries
+            </h2>
+            <p>
+              USA / Global
+            </p>
+            <p>
+              801.947.3100
+            </p>
+            <p>
+              info@mediciventures.com
+            </p>
+          </div>
+          <div
+            className="inquery-info"
+          >
+            <h2
+              className="contactstyle__H2-xs6dfa-1 icQaWP"
+            >
+              PR Inquiries
+            </h2>
+            <p>
+              USA / Global
+            </p>
+            <p>
+              801.947.3564
+            </p>
+            <p>
+              pr@mediciventures.com
+            </p>
+          </div>
+        </div>
+        <picture
+          className="contactstyle__MapImg-xs6dfa-3 jtmPWQ"
+        >
+          <source
+            media="(min-width: 601px)"
+            srcSet="/img/contact-map.png"
+          />
+          <source
+            media="(max-width: 600px)"
+            srcSet="/img/contact-map-600.jpg"
+          />
+          <img
+            alt="Medici Ventures Location"
+            src="/img/contact-map-600.jpg"
+          />
+        </picture>
+      </section>
+      <section
+        className="contact-us"
+      >
+        <h2
+          className="contactstyle__H2-xs6dfa-1 contactstyle__ContactH2-xs6dfa-4 eKWCVD"
+        >
+          Contact Us
+        </h2>
+        
+        <form
+          className="contactstyle__ContactForm-xs6dfa-5 YnZiE"
+          data-testid="contact-form"
+          onSubmit={[Function]}
+        >
+          <fieldset>
+            <legend>
+              Name
+              <sup>
+                *
+              </sup>
+            </legend>
+            <label
+              className="sub-label"
+            >
+              <input
+                data-testid="first-name-input"
+                id="firstName"
+                maxLength="30"
+                name="fname"
+                onChange={[Function]}
+                required={true}
+                type="text"
+                value=""
+              />
+              First Name
+            </label>
+            <label
+              className="sub-label"
+            >
+              <input
+                data-testid="last-name-input"
+                id="lastName"
+                maxLength="30"
+                name="lname"
+                onChange={[Function]}
+                type="text"
+                value=""
+              />
+              Last Name
+            </label>
+          </fieldset>
+          <label
+            htmlFor="company"
+          >
+            Company
+          </label>
+          <input
+            data-testid="company-input"
+            id="company"
+            maxLength="100"
+            name="company"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <label
+            htmlFor="email"
+          >
+            Email Address
+            <sup>
+              *
+            </sup>
+          </label>
+          <input
+            data-testid="email-input"
+            id="email"
+            maxLength="100"
+            name="email"
+            onChange={[Function]}
+            required={true}
+            type="email"
+            value=""
+          />
+          
+          <label
+            className="phone-number"
+          >
+            <input
+              data-testid="phone-input"
+              id="phone"
+              maxLength="12"
+              name="phone"
+              onChange={[Function]}
+              type="text"
+              value=""
+            />
+          </label>
+          <label
+            htmlFor="subject"
+          >
+            Subject
+            <sup>
+              *
+            </sup>
+          </label>
+          <input
+            data-testid="subject-input"
+            id="subject"
+            maxLength="100"
+            name="subject"
+            onChange={[Function]}
+            required={true}
+            type="text"
+            value=""
+          />
+          <label
+            htmlFor="message"
+          >
+            Message
+            <sup>
+              *
+            </sup>
+          </label>
+          <textarea
+            data-testid="message-input"
+            id="message"
+            maxLength="500"
+            name="message"
+            onChange={[Function]}
+            required={true}
+            value=""
+          />
+          <button
+            className="contactstyle__Button-xs6dfa-7 ggbHwo"
+            data-testid="submit-button-mobile"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </section>
+    </main>
+  </div>
+</div>
+`;

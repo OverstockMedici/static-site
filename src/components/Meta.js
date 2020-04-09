@@ -1,6 +1,6 @@
 import React from 'react';
 import { Head } from 'react-static';
-import { useLocation } from 'components/Router';
+import { useLocation } from './Router';
 
 // Most pages have a meta.image but it is optional
 // Optional children to apss in any additional page specific tags in the Head

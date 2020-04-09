@@ -98,11 +98,11 @@ export default function Contact() {
 
     const getButtonContent = () =>
         state.loading ? (
-            <Button type="submit" disabled isMobile={store.isMobile}>
+            <Button data-testid="submit-button" type="submit" disabled isMobile={store.isMobile}>
                 Submitting
             </Button>
         ) : (
-            <Button type="submit" isMobile={store.isMobile}>
+            <Button data-testid="submit-button-mobile" type="submit" isMobile={store.isMobile}>
                 Submit
             </Button>
         );
@@ -149,7 +149,7 @@ export default function Contact() {
                         <ServerMsg>{state.serverMsg}</ServerMsg>
                     )}
                     {!state.serverMsg && (
-                        <ContactForm onSubmit={handleSubmit}>
+                        <ContactForm data-testid="contact-form" onSubmit={handleSubmit}>
                             <fieldset>
                                 <legend>
                                     Name<sup>*</sup>
@@ -163,6 +163,7 @@ export default function Contact() {
                                         maxLength="30"
                                         required
                                         onChange={handleInputChange}
+                                        data-testid="first-name-input"
                                     />
                                     First Name
                                 </label>
@@ -174,6 +175,7 @@ export default function Contact() {
                                         value={lname}
                                         maxLength="30"
                                         onChange={handleInputChange}
+                                        data-testid="last-name-input"
                                     />
                                     Last Name
                                 </label>
@@ -186,6 +188,7 @@ export default function Contact() {
                                 value={company}
                                 maxLength="100"
                                 onChange={handleInputChange}
+                                data-testid="company-input"
                             />
                             <label htmlFor="email">
                                 Email Address<sup>*</sup>
@@ -198,6 +201,7 @@ export default function Contact() {
                                 maxLength="100"
                                 required
                                 onChange={handleInputChange}
+                                data-testid="email-input"
                             />
                             {state.formErrorMsg && (
                                 <ErrorMessage>
@@ -212,6 +216,7 @@ export default function Contact() {
                                     value={phone}
                                     maxLength="12"
                                     onChange={handleInputChange}
+                                    data-testid="phone-input"
                                 />
                             </label>
                             <label htmlFor="subject">
@@ -225,6 +230,7 @@ export default function Contact() {
                                 maxLength="100"
                                 required
                                 onChange={handleInputChange}
+                                data-testid="subject-input"
                             />
                             <label htmlFor="message">
                                 Message<sup>*</sup>
@@ -236,6 +242,7 @@ export default function Contact() {
                                 value={message}
                                 required
                                 onChange={handleInputChange}
+                                data-testid="message-input"
                             />
                             {getButtonContent()}
                         </ContactForm>

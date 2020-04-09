@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  data-testid="list-mobile"
+  onClick={[Function]}
+>
+  <img
+    alt="SpaceX logo"
+    src="https://www.spacex.com/sites/spacex/files/spacex_logo_white.png"
+  />
+  <div
+    className="company-description"
+    data-testid="list-mobile-style"
+    style={
+      Object {
+        "backgroundColor": "rgb(0, 0, 0)",
+      }
+    }
+  >
+    The first company to achieve orbit with liquid-fueled rocket, SpaceX develops launch systems at dramatically-lower costs than any entity - government or private - in history
+     Visit
+     
+    <a
+      href="https://www.spacex.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    />
+  </div>
+</div>
+`;

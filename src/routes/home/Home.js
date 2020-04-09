@@ -5,6 +5,7 @@ import { Main, Hero, DownButton, Overview, Industries, WhoIs, LearnMore } from '
 import { ButtonLink } from '../../components/ButtonLink';
 import { home, meta } from '../../content/home.content';
 import { Context } from '../../store';
+import OverviewComponent from './OverviewComponent';
 
 const advancingBlockchainTechnology = 'img/ABT.svg';
 const peaceColiseum = 'img/peace-coliseum.png';
@@ -64,11 +65,12 @@ export default function Home() {
     };
 
     const buildOverview = () => (
-        home.overview.map((overview, index) => (
-            <div className={`overview-${index + 1}`} key={overview.heading}>
-                <h2>{overview.heading}</h2>
-                <p>{overview.content}</p>
-            </div>
+        home.overview.map(({heading, content}, index) => (
+            <OverviewComponent 
+                key={heading}
+                styleName={`overview-${index + 1}`}
+                {...{ heading, content }}
+            />
         ))
     );
 
