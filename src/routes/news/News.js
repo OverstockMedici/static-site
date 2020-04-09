@@ -3,7 +3,7 @@ import Meta from '../../components/Meta';
 import { Hero, Articles } from './news.style';
 import { content, meta } from '../../content/news.content';
 import { useRouteData } from 'react-static';
-import ArticleList from './ArticleList';
+import ArticleListItem from './ArticleListItem';
 
 const { heading1 } = content;
 
@@ -12,7 +12,7 @@ export default function News() {
 
     const buildArticles = () =>
         news.map(({ link, imageURL, title, createdAt, paragraphs, id }) => (
-            <ArticleList
+            <ArticleListItem
                 key={id}
                 {...{ link, imageURL, title, createdAt, paragraphs }}
             />

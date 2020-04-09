@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CompanyList } from './companies.style';
 import { content } from '../../content/companies.content';
-import ListMobile from './ListMobile';
+import ListItemMobile from './ListItemMobile';
 
 const { companies } = content;
 
@@ -14,7 +14,7 @@ export default function MobileCompanyList() {
     };
     const buildCompanyList = () =>
         companies.map(({ link, name, image, color, description, linkText }) => (
-            <ListMobile
+            <ListItemMobile
                 key={name}
                 cardStyle={state.openCompanyName === name ? 'open' : ''}
                 {...{

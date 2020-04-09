@@ -1,14 +1,14 @@
 import React from 'react';
 import { content } from '../../content/companies.content';
 import { CompanyListDesktop } from './companies.style';
-import List from './List';
+import ListItem from './ListItem';
 
 const { companies } = content;
 
 export default function DesktopCompanyList() {
     const buildCompanyList = () => (
         companies.map(({link, name, image, color, description}) => (
-            <List key={name} {...{ link, name, image, color, description }} />
+            <ListItem key={name} {...{ link, name, image, color, description }} />
         ))
     );
 
