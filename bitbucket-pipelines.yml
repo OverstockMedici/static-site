@@ -36,7 +36,6 @@ pipelines:
             - yarn deploy:stage
       - step:
           name: Prod
-          trigger: manual
           script:
             - *setupTools
             - *setupAuth
