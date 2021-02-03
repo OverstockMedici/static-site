@@ -6,6 +6,7 @@ import MobileNav from './MobileNav';
 import HamburgerIcon from '../icons/HamburgerIcon';
 import { nav } from '../../content/nav.content';
 import { Context } from '../../store';
+import Banner from '../banner/Banner';
 
 const logo = '/img/medici-ventures-logo.png';
 
@@ -53,11 +54,21 @@ export default function Header() {
             <SiteHeader id="siteHeader">
                 {(
                     store.isMobile
-                    && <Open onClick={toggleClose} aria-label="hamburger menu" title="hamburger menu"><HamburgerIcon className="hamburger-icon" width={24} height={18} /></Open>
+                    && <Open 
+                            onClick={toggleClose} 
+                            aria-label="hamburger menu" 
+                            title="hamburger menu"
+                        >
+                            <HamburgerIcon className="hamburger-icon" width={24} height={18} />
+                        </Open>
                 )}
                 <Link to="/"><LogoImg src={logo} alt="Medici Ventures Logo" /></Link>
                 {renderNav()}
             </SiteHeader>
+            <Banner 
+                text="Overstock Partners with Pelion Venture Partners to Oversee Medici Ventures’ Blockchain Assets" 
+                link="https://investors.overstock.com/news-releases/news-release-details/overstock-partners-pelion-venture-partners-oversee-medici"
+            />
         </HeaderWrapper>
     );
 }
