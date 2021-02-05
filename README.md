@@ -19,11 +19,11 @@ This project is built on [React](https://reactjs.org/) and [React-Static](https:
 * `analyze` - runs FoamTree analysis of bundled files and dependency weight
 * `serve` - serve built files on port 3000
 
-## Publishing to Stage
-_Details coming_...
-
 ## Publishing to Production
-_Details coming_...
+* `yarn build`
+* `git add . && git commit`
+* `git push origin :gh-pages`
+* `git subtree push --prefix dist origin gh-pages`
 
 ## Sibling Applications
 
