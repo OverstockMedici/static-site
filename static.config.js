@@ -3,58 +3,77 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import React from 'react';
 
-const initialize = async () => {
-    const firebaseConfig = {
-        apiKey: 'AIzaSyB1z7dcqRkxOmCBnYPKBeB9Sgg5NeSp_90',
-        authDomain: 'corp-200921.firebaseapp.com',
-        databaseURL: 'https://corp-200921.firebaseio.com',
-        projectId: 'corp-200921',
-        storageBucket: 'corp-200921.appspot.com',
-        messagingSenderId: '271841444124',
-        appId: '1:271841444124:web:b8fc658393f1e0fd847ad9',
-    };
-
-    firebase.initializeApp(firebaseConfig);
-};
-
 export default {
     siteRoot: 'https://www.mediciventures.com',
     stagingSiteRoot: '/',
     getRoutes: async () => {
-        await initialize();
-        const db = firebase.firestore();
-        const news = await db
-            .collection('news')
-            .orderBy('createdAt', 'desc')
-            .limit(9)
-            .get()
-            .then(function(querySnapshot) {
-                const newsList = [];
-                querySnapshot.forEach(function(doc) {
-                    const data = doc.data();
-                    newsList.push({ ...data, id: doc.id });
-                });
-                return newsList;
-            })
-            .catch(function(error) {
-                console.log('Error getting documents: ', error);
-            });
+        const news = [
+            {
+                id: 1,
+                link: 'https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets',
+                title: 'Coindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain AssetsCoindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain Assets',
+                createdAt: '2021-01-26',
+                paragraphs: []
+            },
+            {
+                id: 2,
+                link: 'https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/',
+                title: 'The Block – SettleMint looks to blockchain self-sovereign identity with IdentiMint',
+                createdAt: '2021-01-25',
+                paragraphs: []
+            },
+            {
+                id: 3,
+                link: 'https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March',
+                title: 'Phocus Wire – IATA Travel Pass digital health solution to be rolled out to major airlines in March',
+                createdAt: '2021-01-13',
+                paragraphs: []
+            },
+            {
+                id: 4,
+                link: 'https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/',
+                title: 'Cayman Compass – RF to offer digital currency transactions in partnership with Bitt',
+                createdAt: '2021-01-13',
+                paragraphs: []
+            },
+            {
+                id: 5,
+                link: 'https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil',
+                title: 'Coindesk – Argentina’s Ripio Acquires Second-Largest Crypto Exchange in Brazil',
+                createdAt: '2021-01-05',
+                paragraphs: []
+            },
+            {
+                id: 6,
+                link: 'https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/',
+                title: 'Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North America',
+                createdAt: '2020-10-30',
+                paragraphs: []
+            },
+            {
+                id: 7,
+                link: 'https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/',
+                title: 'Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North America',
+                createdAt: '2020-10-30',
+                paragraphs: []
+            },
+            {
+                id: 8,
+                link: 'https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt',
+                title: 'Coindesk – Overstock’s Medici Ventures Invests $8M in Blockchain Firm Bitt',
+                createdAt: '2020-10-28',
+                paragraphs: []
+            },
+            {
+                id: 9,
+                link: 'https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/',
+                title: 'Ledger Insights – Stella Artois, Budweiser owner AB InBev uses blockchain from barley field to bar',
+                createdAt: '2020-10-26',
+                paragraphs: []
+            },
+        ];
 
-        const jobs = await db
-            .collection('jobs')
-            .doc('all')
-            .get()
-            .then(doc => {
-                if (doc.exists) {
-                    return doc.data().jobs;
-                } else {
-                    // doc.data() will be undefined in this case
-                    console.log('No such document!');
-                }
-            })
-            .catch(function(error) {
-                console.log('Error getting document:', error);
-            });
+        const jobs = []
 
         return [
             {

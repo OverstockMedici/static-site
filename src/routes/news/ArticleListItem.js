@@ -11,13 +11,13 @@ const ArticleListItem = ({ link, imageURL, title, createdAt, paragraphs }) => {
 
     return (
         <Article data-testid="article-list">
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            {/* <a href={link} target="_blank" rel="noopener noreferrer">
                 <img
                     data-testid="article-list-image"
                     src={imageURL}
                     alt={title}
                 />
-            </a>
+            </a> */}
             <a
                 className="article-heading"
                 href={link}

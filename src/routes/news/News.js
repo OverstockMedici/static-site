@@ -10,6 +10,8 @@ const { heading1 } = content;
 export default function News() {
     const { news } = useRouteData();
 
+
+    console.log('news', news);
     const buildArticles = () =>
         news.map(({ link, imageURL, title, createdAt, paragraphs, id }) => (
             <ArticleListItem
