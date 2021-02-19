@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const homeBlocks2 = 'img/home-blocks-2.png';
-const homeBlocks3 = 'img/home-blocks-3.png';
-const coliseumSm = 'img/companies-coliseum-entrance-360.jpg';
-const coliseumMd = 'img/companies-coliseum-entrance-600.jpg';
-const coliseumLg = 'img/companies-coliseum-entrance-950.jpg';
-const coliseumXL = 'img/companies-coliseum-entrance-1200.jpg';
-const coliseumXXL = 'img/companies-coliseum-entrance-1600.jpg';
+const homeBlocks2 = '/img/home-blocks-2.png';
+const homeBlocks3 = '/img/home-blocks-3.png';
+const coliseumSm = '/img/companies-coliseum-entrance-360.jpg';
+const coliseumMd = '/img/companies-coliseum-entrance-600.jpg';
+const coliseumLg = '/img/companies-coliseum-entrance-950.jpg';
+const coliseumXL = '/img/companies-coliseum-entrance-1200.jpg';
+const coliseumXXL = '/img/companies-coliseum-entrance-1600.jpg';
 
 export const Main = styled.main`
     background: url(${homeBlocks2}) bottom right no-repeat,
