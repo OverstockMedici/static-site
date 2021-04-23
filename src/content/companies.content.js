@@ -93,7 +93,7 @@ export const content = {
         {
             name: 'PeerNova',
             description:
-                'Founded in 2013 by experts in blockchain, big data, and financial infrastructure, PeerNova’s platform simplifies processes and guarantees data integrity across systems.',
+                'PeerNova® is a digital transformation company with a mission to empower financial institutions to unlock their data, increase efficiency, and discover opportunities. Cuneiform® is PeerNova\'s zero-code platform that automates data quality for end-to-end (E2E) visibility.',
             link: 'http://peernova.com/',
             linkText: 'PEERNOVA.com',
             image: '/img/peernova-comp-logo.png',
@@ -169,6 +169,15 @@ export const content = {
             link: 'https://www.vitalchain.com/',
             linkText: 'Vitalchain.com',
             image: '/img/vital-chain.svg',
+            color: '#19c82a',
+        },
+        {
+            name: 'Chainstone',
+            description:
+                "Our mission is to decentralize asset management systems for investors, investment advisors, brokers, funds and money managers.",
+            link: 'https://chainstone.com/',
+            linkText: 'Chainstone.com',
+            image: '/img/chainstone-logo.png',
             color: '#19c82a',
         },
     ],

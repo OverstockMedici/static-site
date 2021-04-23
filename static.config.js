@@ -4,7 +4,7 @@ import 'firebase/firestore';
 import React from 'react';
 
 export default {
-    siteRoot: 'https://www.mediciventures.com',
+    siteRoot: 'https://www.mediciventures.com/',
     stagingSiteRoot: '/',
     getRoutes: async () => {
         const news = [
@@ -83,13 +83,6 @@ export default {
             {
                 path: '/companies',
                 template: 'src/routes/companies/Companies',
-            },
-            {
-                path: '/team',
-                template: 'src/routes/team/Team',
-                getData: () => ({
-                    jobs,
-                }),
             },
             {
                 path: '/news',

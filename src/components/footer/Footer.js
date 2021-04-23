@@ -18,7 +18,7 @@ export default function Footer() {
                 <FooterLogo src={reversedLogo} alt="Medici Ventures Logo" />
             </Link>
             <FooterNav>{buildFooterLinks}</FooterNav>
-            <Copyright>Copyright &copy; Medici Ventures Inc. 2020</Copyright>
+            <Copyright>Copyright &copy; Medici Ventures Inc. 2021</Copyright>
         </MainFooter>
     );
 }

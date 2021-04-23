@@ -128,13 +128,13 @@ export default function Contact() {
                             <H2>Business Inquries</H2>
                             <p>USA / Global</p>
                             <p>801.947.3100</p>
-                            <p>info@mediciventures.com</p>
+                            <p>info@pelionvp.com</p>
                         </div>
                         <div className="inquery-info">
                             <H2>PR Inquiries</H2>
                             <p>USA / Global</p>
                             <p>801.947.3564</p>
-                            <p>pr@mediciventures.com</p>
+                            <p>pr@pelionvp.com</p>
                         </div>
                     </div>
                     <MapImg>
@@ -143,111 +143,6 @@ export default function Contact() {
                         <img src={mapImgSm} alt="Medici Ventures Location" />
                     </MapImg>
                 </Inquiries>
-                <section className="contact-us">
-                    <ContactH2>Contact Us</ContactH2>
-                    {state.serverMsg && (
-                        <ServerMsg>{state.serverMsg}</ServerMsg>
-                    )}
-                    {!state.serverMsg && (
-                        <ContactForm data-testid="contact-form" onSubmit={handleSubmit}>
-                            <fieldset>
-                                <legend>
-                                    Name<sup>*</sup>
-                                </legend>
-                                <label className="sub-label">
-                                    <input
-                                        type="text"
-                                        id="firstName"
-                                        name="fname"
-                                        value={fname}
-                                        maxLength="30"
-                                        required
-                                        onChange={handleInputChange}
-                                        data-testid="first-name-input"
-                                    />
-                                    First Name
-                                </label>
-                                <label className="sub-label">
-                                    <input
-                                        type="text"
-                                        id="lastName"
-                                        name="lname"
-                                        value={lname}
-                                        maxLength="30"
-                                        onChange={handleInputChange}
-                                        data-testid="last-name-input"
-                                    />
-                                    Last Name
-                                </label>
-                            </fieldset>
-                            <label htmlFor="company">Company</label>
-                            <input
-                                type="text"
-                                id="company"
-                                name="company"
-                                value={company}
-                                maxLength="100"
-                                onChange={handleInputChange}
-                                data-testid="company-input"
-                            />
-                            <label htmlFor="email">
-                                Email Address<sup>*</sup>
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={email}
-                                maxLength="100"
-                                required
-                                onChange={handleInputChange}
-                                data-testid="email-input"
-                            />
-                            {state.formErrorMsg && (
-                                <ErrorMessage>
-                                    {state.formErrorMsg}
-                                </ErrorMessage>
-                            )}
-                            <label className="phone-number">
-                                <input
-                                    type="text"
-                                    id="phone"
-                                    name="phone"
-                                    value={phone}
-                                    maxLength="12"
-                                    onChange={handleInputChange}
-                                    data-testid="phone-input"
-                                />
-                            </label>
-                            <label htmlFor="subject">
-                                Subject<sup>*</sup>
-                            </label>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                value={subject}
-                                maxLength="100"
-                                required
-                                onChange={handleInputChange}
-                                data-testid="subject-input"
-                            />
-                            <label htmlFor="message">
-                                Message<sup>*</sup>
-                            </label>
-                            <textarea
-                                id="message"
-                                maxLength="500"
-                                name="message"
-                                value={message}
-                                required
-                                onChange={handleInputChange}
-                                data-testid="message-input"
-                            />
-                            {getButtonContent()}
-                        </ContactForm>
-                    )}
-                </section>
             </main>
         </div>
     );
