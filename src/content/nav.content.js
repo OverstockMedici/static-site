@@ -5,10 +5,6 @@ export const nav = [
         link: '/companies'
     },
     {
-        name: 'Team',
-        link: '/team'
-    },
-    {
         name: 'News',
         link: '/news'
     },

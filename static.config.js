@@ -85,13 +85,6 @@ export default {
                 template: 'src/routes/companies/Companies',
             },
             {
-                path: '/team',
-                template: 'src/routes/team/Team',
-                getData: () => ({
-                    jobs,
-                }),
-            },
-            {
                 path: '/news',
                 template: 'src/routes/news/News',
                 getData: () => ({

@@ -54,9 +54,9 @@ export default function Header() {
             <SiteHeader id="siteHeader">
                 {(
                     store.isMobile
-                    && <Open 
-                            onClick={toggleClose} 
-                            aria-label="hamburger menu" 
+                    && <Open
+                            onClick={toggleClose}
+                            aria-label="hamburger menu"
                             title="hamburger menu"
                         >
                             <HamburgerIcon className="hamburger-icon" width={24} height={18} />
@@ -65,8 +65,8 @@ export default function Header() {
                 <Link to="/"><LogoImg src={logo} alt="Medici Ventures Logo" /></Link>
                 {renderNav()}
             </SiteHeader>
-            <Banner 
-                text="Overstock Partners with Pelion Venture Partners to Oversee Medici Ventures’ Blockchain Assets" 
+            <Banner
+                text="Overstock Closes Strategic Partnership with Pelion Venture Partners to Oversee Medici Ventures’ Blockchain Assets"
                 link="https://investors.overstock.com/news-releases/news-release-details/overstock-partners-pelion-venture-partners-oversee-medici"
             />
         </HeaderWrapper>
