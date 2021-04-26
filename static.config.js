@@ -4,7 +4,7 @@ import 'firebase/firestore';
 import React from 'react';
 
 export default {
-    siteRoot: 'https://www.mediciventures.com',
+    siteRoot: 'http://34.117.120.35/',
     stagingSiteRoot: '/',
     getRoutes: async () => {
         const news = [

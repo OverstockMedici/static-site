@@ -1,833 +1,109 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta name="generator" content="React Static" />
-    <title data-react-helmet="true">News — Medici Ventures INC</title>
-    <meta data-react-helmet="true" name="description" content="Medici Ventures&#x27; latest news articles" />
-    <meta data-react-helmet="true" property="og:title" content="News — Medici Ventures INC" />
-    <meta data-react-helmet="true" property="og:description" content="Medici Ventures&#x27; latest news articles" />
-    <meta data-react-helmet="true" property="og:image" content="/img/news-banner-600.jpg" />
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-145816993-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        window.dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-145816993-1");
-    </script>
-    <script type="application/ld+json">
-                  [
-                      {
-                          "url":"https://www.mediciventures.com",
-                          "name":"Medici Ventures INC",
-                          "description":"Medici Ventures is a wholly-owned subsidiary of Overstock.com launched in 2014. Our goal is to change the world by advancing blockchain technology.",
-                          "image":"/img/medici-ventures-logo.png",
-                          "@context":"http://schema.org",
-                          "@type":"WebSite"
-                      },
-                      {
-                          "legalName":"Medici Ventures Inc",
-                          "email":"info@mediciventures.com",
-                          "@context":"http://schema.org",
-                          "@type":"Organization"
-                      },
-                      {
-                          "address":"Coliseum Way
-      Midvale, UT, 84047
-      United States",
-                          "telephone":"801-947-3100",
-                          "image":"/img/medici-ventures-logo.png",
-                          "name":"Medici Ventures Inc",
-                          "@context":"http://schema.org",
-                          "@type":"Place"
-                      }
-                  ]
-    </script>
-    <link rel="preload" as="script" href="/templates/styles.7aeff49b.js" />
-    <link rel="preload" as="script" href="/templates/vendors~main.670993b6.js" />
-    <link rel="preload" as="script" href="/main.1cc7de58.js" />
-    <link rel="preload" as="style" href="/styles.7aeff49b.css" />
-    <link rel="stylesheet" href="/styles.7aeff49b.css" />
-    <link data-react-helmet="true" rel="canonical" href="/news" />
-    <style data-styled="" data-styled-version="5.2.1">
-      .fMnkbQ {
-        background-color: #ffffff;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 200;
-      } /*!sc*/
-      data-styled.g1[id="headerstyle__HeaderWrapper-sc-194jji1-0"] {
-        content: "fMnkbQ,";
-      } /*!sc*/
-      .ewAcdl {
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 15px 60px;
-        width: 100%;
-        height: 50px;
-      } /*!sc*/
-      @media (min-width: 641px) {
-        .ewAcdl {
-          -webkit-box-pack: justify;
-          -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-          justify-content: space-between;
-          height: 63px;
-        }
-      } /*!sc*/
-      @media (min-width: 1400px) {
-        .ewAcdl {
-          padding: 15px 20px;
-        }
-      } /*!sc*/
-      data-styled.g2[id="headerstyle__SiteHeader-sc-194jji1-1"] {
-        content: "ewAcdl,";
-      } /*!sc*/
-      .fCkvLq {
-        background: none;
-        border: none;
-        position: absolute;
-        left: 10px;
-        top: 14px;
-      } /*!sc*/
-      .fCkvLq:focus {
-        outline: none;
-      } /*!sc*/
-      data-styled.g3[id="headerstyle__Open-sc-194jji1-2"] {
-        content: "fCkvLq,";
-      } /*!sc*/
-      .WYQCj {
-        max-width: 80px;
-      } /*!sc*/
-      @media (min-width: 641px) {
-        .WYQCj {
-          max-width: 120px;
-        }
-      } /*!sc*/
-      data-styled.g4[id="headerstyle__LogoImg-sc-194jji1-3"] {
-        content: "WYQCj,";
-      } /*!sc*/
-      .fTcznB.desktop-nav {
-        display: none;
-      } /*!sc*/
-      .fTcznB.desktop-nav:hover a {
-        color: rgba(79, 79, 79, 0.4);
-      } /*!sc*/
-      .fTcznB.desktop-nav a:hover {
-        color: #4f4f4f;
-      } /*!sc*/
-      @media (min-width: 641px) {
-        .fTcznB.desktop-nav {
-          display: block;
-        }
-      } /*!sc*/
-      .fTcznB.mobile-nav {
-        background-color: #ffffff;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        height: 100%;
-        left: -100%;
-        padding: 2em 0 2em 0;
-        position: fixed;
-        top: 0;
-        -webkit-transition: -webkit-transform 170ms ease-in-out;
-        -webkit-transition: transform 170ms ease-in-out;
-        transition: transform 170ms ease-in-out;
-        width: 100%;
-        z-index: 100;
-      } /*!sc*/
-      .fTcznB.mobile-nav a {
-        font-size: 2em;
-        font-weight: 300;
-        padding: 0 1em 0.618em 1em;
-      } /*!sc*/
-      .fTcznB.mobile-nav.open {
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        transform: translateX(100%);
-      } /*!sc*/
-      data-styled.g5[id="headerstyle__Nav-sc-194jji1-4"] {
-        content: "fTcznB,";
-      } /*!sc*/
-      .NmYvG {
-        color: #0b1500;
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 0.618em;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-        -webkit-transition: color 170ms ease-in-out;
-        transition: color 170ms ease-in-out;
-      } /*!sc*/
-      data-styled.g6[id="headerstyle__StyledLink-sc-194jji1-5"] {
-        content: "NmYvG,";
-      } /*!sc*/
-      .jTokdM {
-        color: #4f4f4f;
-        background-color: #f3f4f1;
-        border: none;
-        padding: 1.5em;
-        position: absolute;
-        right: 0;
-        top: 0;
-      } /*!sc*/
-      .jTokdM:focus {
-        outline: none;
-      } /*!sc*/
-      data-styled.g7[id="headerstyle__Close-sc-194jji1-6"] {
-        content: "jTokdM,";
-      } /*!sc*/
-      .cLobxh {
-        padding: 30px;
-        height: auto;
-        color: #ffffff;
-        background-color: #39452c;
-        font-size: 1.1rem;
-        max-width: 100%;
-      } /*!sc*/
-      .cLobxh .icon-wrapper {
-        padding-right: 20px;
-        height: 24px;
-      } /*!sc*/
-      .cLobxh .banner-text {
-        margin: 0;
-      } /*!sc*/
-      .cLobxh .banner-text a {
-        color: #0b1500;
-        line-height: 1.4;
-        color: #ffffff;
-      } /*!sc*/
-      @media (min-width: 641px) {
-        .cLobxh {
-          -webkit-box-pack: center;
-          -webkit-justify-content: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          height: auto;
-        }
-      } /*!sc*/
-      @media (min-width: 1400px) {
-        .cLobxh {
-          padding: 40px;
-          font-size: 1.3rem;
-        }
-      } /*!sc*/
-      data-styled.g8[id="Banner__StyledBanner-bcqd25-0"] {
-        content: "cLobxh,";
-      } /*!sc*/
-      .iaSkID {
-        background: #39452c url(/img/footer-blocks-green.png) center right no-repeat;
-        background-size: cover;
-        color: #ffffff;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        padding: 65px 0;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      } /*!sc*/
-      .iaSkID .footer-logo-link {
-        text-align: center;
-      } /*!sc*/
-      .iaSkID a {
-        color: #b6bdac;
-      } /*!sc*/
-      @media (min-width: 1000px) {
-        .iaSkID {
-          -webkit-align-items: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          background-size: contain;
-          -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-          flex-direction: row;
-          -webkit-box-pack: left;
-          -webkit-justify-content: left;
-          -ms-flex-pack: left;
-          justify-content: left;
-          padding: 30px 0;
-        }
-      } /*!sc*/
-      data-styled.g9[id="footerstyle__MainFooter-sc-1pui8ac-0"] {
-        content: "iaSkID,";
-      } /*!sc*/
-      .bvlwzW {
-        max-height: 34px;
-        -webkit-align-self: center;
-        -ms-flex-item-align: center;
-        align-self: center;
-      } /*!sc*/
-      @media (min-width: 1000px) {
-        .bvlwzW {
-          margin: 0 50px;
-          max-height: 23px;
-        }
-      } /*!sc*/
-      @media (min-width: 1201px) {
-        .bvlwzW {
-          max-height: 30px;
-        }
-      } /*!sc*/
-      data-styled.g10[id="footerstyle__FooterLogo-sc-1pui8ac-1"] {
-        content: "bvlwzW,";
-      } /*!sc*/
-      .gTftyL {
-        font-size: 12px;
-        padding: 25px 0;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      } /*!sc*/
-      .gTftyL a {
-        margin: 10px;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-      } /*!sc*/
-      .gTftyL a:hover {
-        -webkit-text-decoration: underline;
-        text-decoration: underline;
-      } /*!sc*/
-      @media (min-width: 451px) {
-        .gTftyL a {
-          display: inline-block;
-          position: relative;
-          margin: 20px;
-        }
-        .gTftyL a:after {
-          content: "";
-          background-color: #b6bdac;
-          display: block;
-          height: 36px;
-          position: absolute;
-          top: -10px;
-          right: -20px;
-          width: 1px;
-        }
-        .gTftyL a:last-child:after {
-          background: none;
-        }
-      } /*!sc*/
-      data-styled.g11[id="footerstyle__FooterNav-sc-1pui8ac-2"] {
-        content: "gTftyL,";
-      } /*!sc*/
-      .clrftH {
-        font-size: 16px;
-        margin: 0 50px;
-        text-align: center;
-      } /*!sc*/
-      @media (min-width: 1000px) {
-        .clrftH {
-          margin-left: auto;
-        }
-      } /*!sc*/
-      data-styled.g12[id="footerstyle__Copyright-sc-1pui8ac-3"] {
-        content: "clrftH,";
-      } /*!sc*/
-      .WOiyE {
-        background: center center no-repeat url("/img/news-banner-600.jpg");
-        background-size: cover;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        height: 20vw;
-        max-height: 400px;
-        min-height: 145px;
-      } /*!sc*/
-      .WOiyE h1 {
-        color: white;
-        font-size: 48px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        -webkit-letter-spacing: -0.3px;
-        -moz-letter-spacing: -0.3px;
-        -ms-letter-spacing: -0.3px;
-        letter-spacing: -0.3px;
-        text-align: center;
-        text-shadow: #000 0 0 50px;
-        text-transform: uppercase;
-      } /*!sc*/
-      @media (min-width: 601px) {
-        .WOiyE {
-          background-image: url(/img/news-banner-900.jpg);
-        }
-      } /*!sc*/
-      @media (min-width: 901px) {
-        .WOiyE {
-          background-image: url(/img/news-banner-1200.jpg);
-        }
-      } /*!sc*/
-      @media (min-width: 1201px) {
-        .WOiyE {
-          background-image: url(/img/news-banner-1600.jpg);
-        }
-      } /*!sc*/
-      data-styled.g13[id="newsstyle__Hero-xbmq8k-0"] {
-        content: "WOiyE,";
-      } /*!sc*/
-      .joIpUW {
-        margin: 0 auto;
-        max-width: 1440px;
-      } /*!sc*/
-      @media (min-width: 677px) {
-        .joIpUW {
-          display: -webkit-box;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-flex-wrap: wrap;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-        }
-      } /*!sc*/
-      data-styled.g14[id="newsstyle__Articles-xbmq8k-1"] {
-        content: "joIpUW,";
-      } /*!sc*/
-      .iOobje {
-        padding: 50px;
-      } /*!sc*/
-      .iOobje:nth-child(even) {
-        background-color: #f3f4f1;
-      } /*!sc*/
-      .iOobje img {
-        width: 100%;
-      } /*!sc*/
-      .iOobje .article-heading {
-        color: black;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-      } /*!sc*/
-      .iOobje .article-heading:hover {
-        -webkit-text-decoration: underline;
-        text-decoration: underline;
-      } /*!sc*/
-      .iOobje .article-heading h2 {
-        font-size: 20px;
-        margin: 15px 0;
-        text-transform: uppercase;
-      } /*!sc*/
-      .iOobje p {
-        font-size: 18px;
-        font-weight: 300;
-      } /*!sc*/
-      .iOobje p a {
-        color: #526041;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-      } /*!sc*/
-      .iOobje p a:hover {
-        -webkit-text-decoration: underline;
-        text-decoration: underline;
-      } /*!sc*/
-      .iOobje .read-more-link {
-        color: black;
-        font-weight: 600;
-        -webkit-text-decoration: none;
-        text-decoration: none;
-      } /*!sc*/
-      .iOobje .read-more-link:hover {
-        -webkit-text-decoration: underline;
-        text-decoration: underline;
-      } /*!sc*/
-      .iOobje time {
-        display: block;
-        font-size: 13px;
-        opacity: 0.7;
-        margin-top: 15px;
-      } /*!sc*/
-      @media (min-width: 677px) {
-        .iOobje {
-          width: 50%;
-        }
-        .iOobje:nth-child(even) {
-          background-color: white;
-        }
-        .iOobje:nth-child(4n + 4),
-        .iOobje:nth-child(4n + 1) {
-          background-color: #f3f4f1;
-        }
-      } /*!sc*/
-      @media (min-width: 980px) {
-        .iOobje {
-          width: 33.33%;
-        }
-        .iOobje:nth-child(4n + 4),
-        .iOobje:nth-child(4n + 1) {
-          background-color: white;
-        }
-        .iOobje:nth-child(even) {
-          background-color: #f3f4f1;
-        }
-      } /*!sc*/
-      data-styled.g15[id="newsstyle__Article-xbmq8k-2"] {
-        content: "iOobje,";
-      } /*!sc*/
-    </style>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-  </head>
-  <body>
-    <div id="root">
-      <div style="outline: none" tabindex="-1">
-        <header class="headerstyle__HeaderWrapper-sc-194jji1-0 fMnkbQ">
-          <div id="siteHeader" class="headerstyle__SiteHeader-sc-194jji1-1 ewAcdl">
-            <button aria-label="hamburger menu" title="hamburger menu" class="headerstyle__Open-sc-194jji1-2 fCkvLq">
-              <svg viewBox="0 0 24 18" height="18" width="24">
-                <line fill="none" stroke="black" stroke-miterlimit="10" x1="0" y1="2" x2="24" y2="2"></line>
-                <line fill="none" stroke="black" stroke-miterlimit="10" x1="0" y1="9" x2="24" y2="9"></line>
-                <line fill="none" stroke="black" stroke-miterlimit="10" x1="0" y1="16" x2="24" y2="16"></line>
-              </svg></button
-            ><a href="/"
-              ><img
-                src="/img/medici-ventures-logo.png"
-                alt="Medici Ventures Logo"
-                class="headerstyle__LogoImg-sc-194jji1-3 WYQCj"
-            /></a>
-            <nav class="headerstyle__Nav-sc-194jji1-4 fTcznB mobile-nav">
-              <button aria-label="Close Nav Menu" title="Close Nav Menu" class="headerstyle__Close-sc-194jji1-6 jTokdM">
-                <svg viewBox="0 0 16 16" height="15px" width="15px">
-                  <line fill="none" stroke="black" stroke-miterlimit="10" x1="1.4" y1="1.4" x2="14.4" y2="14.4"></line>
-                  <line fill="none" stroke="black" stroke-miterlimit="10" x1="1.4" y1="14.4" x2="14.4" y2="1.4"></line>
-                </svg></button
-              ><a class="headerstyle__StyledLink-sc-194jji1-5 NmYvG" href="/">Home</a
-              ><a class="headerstyle__StyledLink-sc-194jji1-5 NmYvG" href="/companies">Companies</a
-              ><a aria-current="page" class="headerstyle__StyledLink-sc-194jji1-5 NmYvG" href="/news">News</a
-              ><a class="headerstyle__StyledLink-sc-194jji1-5 NmYvG" href="/contact">Contact</a>
-            </nav>
-          </div>
-          <div class="headerstyle__SiteHeader-sc-194jji1-1 Banner__StyledBanner-bcqd25-0 ewAcdl cLobxh">
-            <div class="icon-wrapper">
-              <svg width="24" height="24" viewBox="0 0 24 24">
-                <path
-                  fill="white"
-                  d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 18h-2v-8h2v8zm-1-12.25c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25z"
-                ></path>
-              </svg>
-            </div>
-            <p class="banner-text">
-              <a
-                href="https://investors.overstock.com/news-releases/news-release-details/overstock-partners-pelion-venture-partners-oversee-medici"
-                >Overstock Closes Strategic Partnership with Pelion Venture Partners to Oversee Medici Ventures’
-                Blockchain Assets</a
-              >
-            </p>
-          </div>
-        </header>
-        <div class="content">
-          <div>
-            <div>
-              <div class="news">
-                <main role="main">
-                  <section class="newsstyle__Hero-xbmq8k-0 WOiyE"><h1>Latest News</h1></section>
-                  <section class="newsstyle__Articles-xbmq8k-1 joIpUW">
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>
-                          Coindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain
-                          AssetsCoindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain
-                          Assets
-                        </h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Jan 26, 2021</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>The Block – SettleMint looks to blockchain self-sovereign identity with IdentiMint</h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Jan 25, 2021</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>
-                          Phocus Wire – IATA Travel Pass digital health solution to be rolled out to major airlines in
-                          March
-                        </h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Jan 13, 2021</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>Cayman Compass – RF to offer digital currency transactions in partnership with Bitt</h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Jan 13, 2021</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>Coindesk – Argentina’s Ripio Acquires Second-Largest Crypto Exchange in Brazil</h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Jan 05, 2021</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>
-                          Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability
-                          Platform For Latin &amp; North AmericaBitcoin Exchange Guide – Mastercard And GrainChain
-                          Launch Blockchain Food Traceability Platform For Latin &amp; North America
-                        </h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Oct 30, 2020</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>
-                          Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability
-                          Platform For Latin &amp; North AmericaBitcoin Exchange Guide – Mastercard And GrainChain
-                          Launch Blockchain Food Traceability Platform For Latin &amp; North America
-                        </h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Oct 30, 2020</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>Coindesk – Overstock’s Medici Ventures Invests $8M in Blockchain Firm Bitt</h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Oct 28, 2020</time>
-                    </article>
-                    <article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje">
-                      <a
-                        class="article-heading"
-                        href="https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><h2>
-                          Ledger Insights – Stella Artois, Budweiser owner AB InBev uses blockchain from barley field to
-                          bar
-                        </h2></a
-                      ><a
-                        class="read-more-link"
-                        href="https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >Read the full article</a
-                      ><time>Oct 26, 2020</time>
-                    </article>
-                  </section>
-                </main>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="footerstyle__MainFooter-sc-1pui8ac-0 iaSkID">
-          <a class="footer-logo-link" href="/"
-            ><img
-              src="/img/medici-logo-reversed.png"
-              alt="Medici Ventures Logo"
-              class="footerstyle__FooterLogo-sc-1pui8ac-1 bvlwzW"
-          /></a>
-          <nav class="footerstyle__FooterNav-sc-1pui8ac-2 gTftyL">
-            <a href="/companies">Companies</a><a href="/news">News</a><a href="/contact">Contact</a>
-          </nav>
-          <div class="footerstyle__Copyright-sc-1pui8ac-3 clrftH">Copyright © Medici Ventures Inc. 2020</div>
-        </footer>
-      </div>
-    </div>
-    <script type="text/javascript">
-      window.__routeInfo = {
-        template: "../src/routes/news/News",
-        sharedHashesByProp: {},
-        data: {
-          news: [
-            {
-              id: 1,
-              link:
-                "https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets",
-              title:
-                "Coindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain AssetsCoindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain Assets",
-              createdAt: "2021-01-26",
-              paragraphs: [],
-            },
-            {
-              id: 2,
-              link:
-                "https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/",
-              title: "The Block – SettleMint looks to blockchain self-sovereign identity with IdentiMint",
-              createdAt: "2021-01-25",
-              paragraphs: [],
-            },
-            {
-              id: 3,
-              link:
-                "https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March",
-              title:
-                "Phocus Wire – IATA Travel Pass digital health solution to be rolled out to major airlines in March",
-              createdAt: "2021-01-13",
-              paragraphs: [],
-            },
-            {
-              id: 4,
-              link:
-                "https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/",
-              title: "Cayman Compass – RF to offer digital currency transactions in partnership with Bitt",
-              createdAt: "2021-01-13",
-              paragraphs: [],
-            },
-            {
-              id: 5,
-              link: "https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil",
-              title: "Coindesk – Argentina’s Ripio Acquires Second-Largest Crypto Exchange in Brazil",
-              createdAt: "2021-01-05",
-              paragraphs: [],
-            },
-            {
-              id: 6,
-              link:
-                "https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/",
-              title:
-                "Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North America",
-              createdAt: "2020-10-30",
-              paragraphs: [],
-            },
-            {
-              id: 7,
-              link:
-                "https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/",
-              title:
-                "Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North America",
-              createdAt: "2020-10-30",
-              paragraphs: [],
-            },
-            {
-              id: 8,
-              link: "https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt",
-              title: "Coindesk – Overstock’s Medici Ventures Invests $8M in Blockchain Firm Bitt",
-              createdAt: "2020-10-28",
-              paragraphs: [],
-            },
-            {
-              id: 9,
-              link:
-                "https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/",
-              title:
-                "Ledger Insights – Stella Artois, Budweiser owner AB InBev uses blockchain from barley field to bar",
-              createdAt: "2020-10-26",
-              paragraphs: [],
-            },
-          ],
-        },
-        path: "news",
-        sharedData: {},
-        siteData: {},
-      };
-    </script>
-    <script defer="" type="text/javascript" src="/templates/styles.7aeff49b.js"></script>
-    <script defer="" type="text/javascript" src="/templates/vendors~main.670993b6.js"></script>
-    <script defer="" type="text/javascript" src="/main.1cc7de58.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="en-US"><head><meta name="generator" content="React Static"/><title data-react-helmet="true">News — Medici Ventures INC</title><meta data-react-helmet="true" name="description" content="Medici Ventures&#x27; latest news articles"/><meta data-react-helmet="true" property="og:title" content="News — Medici Ventures INC"/><meta data-react-helmet="true" property="og:description" content="Medici Ventures&#x27; latest news articles"/><meta data-react-helmet="true" property="og:image" content="https://www.mediciventures.com/img/news-banner-600.jpg"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-145816993-1"></script><script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-145816993-1');
+        </script><script type="application/ld+json">
+            [
+                {
+                    "url":"https://www.mediciventures.com",
+                    "name":"Medici Ventures INC",
+                    "description":"Medici Ventures is a wholly-owned subsidiary of Overstock.com launched in 2014. Our goal is to change the world by advancing blockchain technology.",
+                    "image":"https://www.mediciventures.com/img/medici-ventures-logo.png",
+                    "@context":"http://schema.org",
+                    "@type":"WebSite"
+                },
+                {
+                    "legalName":"Medici Ventures Inc",
+                    "email":"info@mediciventures.com",
+                    "@context":"http://schema.org",
+                    "@type":"Organization"
+                },
+                {
+                    "address":"Coliseum Way
+Midvale, UT, 84047
+United States",
+                    "telephone":"801-947-3100",
+                    "image":"https://www.mediciventures.com/img/medici-ventures-logo.png",
+                    "name":"Medici Ventures Inc",
+                    "@context":"http://schema.org",
+                    "@type":"Place"
+                }
+            ]
+        </script><link rel="preload" as="script" href="http://34.117.120.35/templates/styles.7aeff49b.js"/><link rel="preload" as="script" href="http://34.117.120.35/templates/vendors~main.55afa740.js"/><link rel="preload" as="script" href="http://34.117.120.35/main.df7cab44.js"/><link rel="preload" as="style" href="http://34.117.120.35/styles.7aeff49b.css"/><link rel="stylesheet" href="http://34.117.120.35/styles.7aeff49b.css"/><link data-react-helmet="true" rel="canonical" href="https://www.mediciventures.com/news"/><style data-styled="" data-styled-version="5.2.1">.fMnkbQ{background-color:#ffffff;position:fixed;top:0;left:0;width:100%;z-index:200;}/*!sc*/
+data-styled.g1[id="headerstyle__HeaderWrapper-sc-194jji1-0"]{content:"fMnkbQ,"}/*!sc*/
+.ewAcdl{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;max-width:1400px;margin:0 auto;padding:15px 60px;width:100%;height:50px;}/*!sc*/
+@media (min-width:641px){.ewAcdl{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;height:63px;}}/*!sc*/
+@media (min-width:1400px){.ewAcdl{padding:15px 20px;}}/*!sc*/
+data-styled.g2[id="headerstyle__SiteHeader-sc-194jji1-1"]{content:"ewAcdl,"}/*!sc*/
+.fCkvLq{background:none;border:none;position:absolute;left:10px;top:14px;}/*!sc*/
+.fCkvLq:focus{outline:none;}/*!sc*/
+data-styled.g3[id="headerstyle__Open-sc-194jji1-2"]{content:"fCkvLq,"}/*!sc*/
+.WYQCj{max-width:80px;}/*!sc*/
+@media (min-width:641px){.WYQCj{max-width:120px;}}/*!sc*/
+data-styled.g4[id="headerstyle__LogoImg-sc-194jji1-3"]{content:"WYQCj,"}/*!sc*/
+.fTcznB.desktop-nav{display:none;}/*!sc*/
+.fTcznB.desktop-nav:hover a{color:rgba(79,79,79,.4);}/*!sc*/
+.fTcznB.desktop-nav a:hover{color:#4f4f4f;}/*!sc*/
+@media (min-width:641px){.fTcznB.desktop-nav{display:block;}}/*!sc*/
+.fTcznB.mobile-nav{background-color:#ffffff;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;left:-100%;padding:2em 0 2em 0;position:fixed;top:0;-webkit-transition:-webkit-transform 170ms ease-in-out;-webkit-transition:transform 170ms ease-in-out;transition:transform 170ms ease-in-out;width:100%;z-index:100;}/*!sc*/
+.fTcznB.mobile-nav a{font-size:2em;font-weight:300;padding:0 1em .618em 1em;}/*!sc*/
+.fTcznB.mobile-nav.open{-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%);}/*!sc*/
+data-styled.g5[id="headerstyle__Nav-sc-194jji1-4"]{content:"fTcznB,"}/*!sc*/
+.NmYvG{color:#0b1500;display:inline-block;font-size:18px;font-weight:500;padding:.618em;-webkit-text-decoration:none;text-decoration:none;-webkit-transition:color 170ms ease-in-out;transition:color 170ms ease-in-out;}/*!sc*/
+data-styled.g6[id="headerstyle__StyledLink-sc-194jji1-5"]{content:"NmYvG,"}/*!sc*/
+.jTokdM{color:#4f4f4f;background-color:#f3f4f1;border:none;padding:1.5em;position:absolute;right:0;top:0;}/*!sc*/
+.jTokdM:focus{outline:none;}/*!sc*/
+data-styled.g7[id="headerstyle__Close-sc-194jji1-6"]{content:"jTokdM,"}/*!sc*/
+.cLobxh{padding:30px;height:auto;color:#ffffff;background-color:#39452c;font-size:1.1rem;max-width:100%;}/*!sc*/
+.cLobxh .icon-wrapper{padding-right:20px;height:24px;}/*!sc*/
+.cLobxh .banner-text{margin:0;}/*!sc*/
+.cLobxh .banner-text a{color:#0b1500;line-height:1.4;color:#ffffff;}/*!sc*/
+@media (min-width:641px){.cLobxh{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:auto;}}/*!sc*/
+@media (min-width:1400px){.cLobxh{padding:40px;font-size:1.3rem;}}/*!sc*/
+data-styled.g8[id="Banner__StyledBanner-bcqd25-0"]{content:"cLobxh,"}/*!sc*/
+.iaSkID{background:#39452c url(/img/footer-blocks-green.png) center right no-repeat;background-size:cover;color:#ffffff;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:65px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+.iaSkID .footer-logo-link{text-align:center;}/*!sc*/
+.iaSkID a{color:#b6bdac;}/*!sc*/
+@media (min-width:1000px){.iaSkID{-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-size:contain;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:left;-webkit-justify-content:left;-ms-flex-pack:left;justify-content:left;padding:30px 0;}}/*!sc*/
+data-styled.g9[id="footerstyle__MainFooter-sc-1pui8ac-0"]{content:"iaSkID,"}/*!sc*/
+.bvlwzW{max-height:34px;-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;}/*!sc*/
+@media (min-width:1000px){.bvlwzW{margin:0 50px;max-height:23px;}}/*!sc*/
+@media (min-width:1201px){.bvlwzW{max-height:30px;}}/*!sc*/
+data-styled.g10[id="footerstyle__FooterLogo-sc-1pui8ac-1"]{content:"bvlwzW,"}/*!sc*/
+.gTftyL{font-size:12px;padding:25px 0;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+.gTftyL a{margin:10px;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.gTftyL a:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+@media (min-width:451px){.gTftyL a{display:inline-block;position:relative;margin:20px;}.gTftyL a:after{content:"";background-color:#b6bdac;display:block;height:36px;position:absolute;top:-10px;right:-20px;width:1px;}.gTftyL a:last-child:after{background:none;}}/*!sc*/
+data-styled.g11[id="footerstyle__FooterNav-sc-1pui8ac-2"]{content:"gTftyL,"}/*!sc*/
+.clrftH{font-size:16px;margin:0 50px;text-align:center;}/*!sc*/
+@media (min-width:1000px){.clrftH{margin-left:auto;}}/*!sc*/
+data-styled.g12[id="footerstyle__Copyright-sc-1pui8ac-3"]{content:"clrftH,"}/*!sc*/
+.WOiyE{background:center center no-repeat url("/img/news-banner-600.jpg");background-size:cover;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:20vw;max-height:400px;min-height:145px;}/*!sc*/
+.WOiyE h1{color:white;font-size:48px;font-weight:bold;font-style:normal;font-stretch:normal;line-height:normal;-webkit-letter-spacing:-0.3px;-moz-letter-spacing:-0.3px;-ms-letter-spacing:-0.3px;letter-spacing:-0.3px;text-align:center;text-shadow:#000 0 0 50px;text-transform:uppercase;}/*!sc*/
+@media (min-width:601px){.WOiyE{background-image:url(/img/news-banner-900.jpg);}}/*!sc*/
+@media (min-width:901px){.WOiyE{background-image:url(/img/news-banner-1200.jpg);}}/*!sc*/
+@media (min-width:1201px){.WOiyE{background-image:url(/img/news-banner-1600.jpg);}}/*!sc*/
+data-styled.g13[id="newsstyle__Hero-xbmq8k-0"]{content:"WOiyE,"}/*!sc*/
+.joIpUW{margin:0 auto;max-width:1440px;}/*!sc*/
+@media(min-width:677px){.joIpUW{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;}}/*!sc*/
+data-styled.g14[id="newsstyle__Articles-xbmq8k-1"]{content:"joIpUW,"}/*!sc*/
+.iOobje{padding:50px;}/*!sc*/
+.iOobje:nth-child(even){background-color:#f3f4f1;}/*!sc*/
+.iOobje img{width:100%;}/*!sc*/
+.iOobje .article-heading{color:black;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.iOobje .article-heading:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.iOobje .article-heading h2{font-size:20px;margin:15px 0;text-transform:uppercase;}/*!sc*/
+.iOobje p{font-size:18px;font-weight:300;}/*!sc*/
+.iOobje p a{color:#526041;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.iOobje p a:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.iOobje .read-more-link{color:black;font-weight:600;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+.iOobje .read-more-link:hover{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.iOobje time{display:block;font-size:13px;opacity:.7;margin-top:15px;}/*!sc*/
+@media(min-width:677px){.iOobje{width:50%;}.iOobje:nth-child(even){background-color:white;}.iOobje:nth-child(4n + 4),.iOobje:nth-child(4n + 1){background-color:#f3f4f1;}}/*!sc*/
+@media(min-width:980px){.iOobje{width:33.33%;}.iOobje:nth-child(4n + 4),.iOobje:nth-child(4n + 1){background-color:white;}.iOobje:nth-child(even){background-color:#f3f4f1;}}/*!sc*/
+data-styled.g15[id="newsstyle__Article-xbmq8k-2"]{content:"iOobje,"}/*!sc*/
+</style><meta charSet="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/><link rel="preconnect" href="https://www.google-analytics.com"/></head><body><div id="root"><div style="outline:none" tabindex="-1"><header class="headerstyle__HeaderWrapper-sc-194jji1-0 fMnkbQ"><div id="siteHeader" class="headerstyle__SiteHeader-sc-194jji1-1 ewAcdl"><button aria-label="hamburger menu" title="hamburger menu" class="headerstyle__Open-sc-194jji1-2 fCkvLq"><svg viewBox="0 0 24 18" height="18" width="24"><line fill="none" stroke="black" stroke-miterlimit="10" x1="0" y1="2" x2="24" y2="2"></line><line fill="none" stroke="black" stroke-miterlimit="10" x1="0" y1="9" x2="24" y2="9"></line><line fill="none" stroke="black" stroke-miterlimit="10" x1="0" y1="16" x2="24" y2="16"></line></svg></button><a href="http://34.117.120.35/"><img src="http://34.117.120.35/img/medici-ventures-logo.png" alt="Medici Ventures Logo" class="headerstyle__LogoImg-sc-194jji1-3 WYQCj"/></a><nav class="headerstyle__Nav-sc-194jji1-4 fTcznB mobile-nav"><button aria-label="Close Nav Menu" title="Close Nav Menu" class="headerstyle__Close-sc-194jji1-6 jTokdM"><svg viewBox="0 0 16 16" height="15px" width="15px"><line fill="none" stroke="black" stroke-miterlimit="10" x1="1.4" y1="1.4" x2="14.4" y2="14.4"></line><line fill="none" stroke="black" stroke-miterlimit="10" x1="1.4" y1="14.4" x2="14.4" y2="1.4"></line></svg></button><a class="headerstyle__StyledLink-sc-194jji1-5 NmYvG" href="http://34.117.120.35/">Home</a></nav></div><div class="headerstyle__SiteHeader-sc-194jji1-1 Banner__StyledBanner-bcqd25-0 ewAcdl cLobxh"><div class="icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="white" d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 18h-2v-8h2v8zm-1-12.25c.69 0 1.25.56 1.25 1.25s-.56 1.25-1.25 1.25-1.25-.56-1.25-1.25.56-1.25 1.25-1.25z"></path></svg></div><p class="banner-text"><a href="https://investors.overstock.com/news-releases/news-release-details/overstock-partners-pelion-venture-partners-oversee-medici">Overstock Closes Strategic Partnership with Pelion Venture Partners to Oversee Medici Ventures’ Blockchain Assets</a></p></div></header><div class="content"><div><div><div class="news"><main role="main"><section class="newsstyle__Hero-xbmq8k-0 WOiyE"><h1>Latest News</h1></section><section class="newsstyle__Articles-xbmq8k-1 joIpUW"><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets" target="_blank" rel="noopener noreferrer"><h2>Coindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain AssetsCoindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain Assets</h2></a><a class="read-more-link" href="https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Jan 26, 2021</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/" target="_blank" rel="noopener noreferrer"><h2>The Block – SettleMint looks to blockchain self-sovereign identity with IdentiMint</h2></a><a class="read-more-link" href="https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Jan 25, 2021</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March" target="_blank" rel="noopener noreferrer"><h2>Phocus Wire – IATA Travel Pass digital health solution to be rolled out to major airlines in March</h2></a><a class="read-more-link" href="https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Jan 13, 2021</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/" target="_blank" rel="noopener noreferrer"><h2>Cayman Compass – RF to offer digital currency transactions in partnership with Bitt</h2></a><a class="read-more-link" href="https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Jan 13, 2021</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil" target="_blank" rel="noopener noreferrer"><h2>Coindesk – Argentina’s Ripio Acquires Second-Largest Crypto Exchange in Brazil</h2></a><a class="read-more-link" href="https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Jan 05, 2021</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/" target="_blank" rel="noopener noreferrer"><h2>Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin &amp; North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin &amp; North America</h2></a><a class="read-more-link" href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Oct 30, 2020</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/" target="_blank" rel="noopener noreferrer"><h2>Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin &amp; North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin &amp; North America</h2></a><a class="read-more-link" href="https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Oct 30, 2020</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt" target="_blank" rel="noopener noreferrer"><h2>Coindesk – Overstock’s Medici Ventures Invests $8M in Blockchain Firm Bitt</h2></a><a class="read-more-link" href="https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Oct 28, 2020</time></article><article data-testid="article-list" class="newsstyle__Article-xbmq8k-2 iOobje"><a class="article-heading" href="https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/" target="_blank" rel="noopener noreferrer"><h2>Ledger Insights – Stella Artois, Budweiser owner AB InBev uses blockchain from barley field to bar</h2></a><a class="read-more-link" href="https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/" target="_blank" rel="noopener noreferrer">Read the full article</a><time>Oct 26, 2020</time></article></section></main></div></div></div></div><footer class="footerstyle__MainFooter-sc-1pui8ac-0 iaSkID"><a class="footer-logo-link" href="http://34.117.120.35/"><img src="http://34.117.120.35/img/medici-logo-reversed.png" alt="Medici Ventures Logo" class="footerstyle__FooterLogo-sc-1pui8ac-1 bvlwzW"/></a><nav class="footerstyle__FooterNav-sc-1pui8ac-2 gTftyL"></nav><div class="footerstyle__Copyright-sc-1pui8ac-3 clrftH">Copyright © Medici Ventures Inc. 2021</div></footer></div></div><script type="text/javascript">
+    window.__routeInfo = {"template":"../src/routes/news/News","sharedHashesByProp":{},"data":{"news":[{"id":1,"link":"https://www.coindesk.com/overstock-turns-medici-ventures-into-a-fund-to-reap-value-of-blockchain-assets","title":"Coindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain AssetsCoindesk - Overstock Turns Medici Ventures Into a Fund to Reap Value of Blockchain Assets","createdAt":"2021-01-26","paragraphs":[]},{"id":2,"link":"https://blockchaintechnology-news.com/2021/01/settlemint-looks-to-blockchain-self-sovereign-identity-with-identimint/","title":"The Block – SettleMint looks to blockchain self-sovereign identity with IdentiMint","createdAt":"2021-01-25","paragraphs":[]},{"id":3,"link":"https://www.phocuswire.com/iata-travel-pass-digital-health-solution-used-by-most-of-world-s-biggest-airlines-in-March","title":"Phocus Wire – IATA Travel Pass digital health solution to be rolled out to major airlines in March","createdAt":"2021-01-13","paragraphs":[]},{"id":4,"link":"https://www.caymancompass.com/2021/01/13/rf-to-offer-digital-currency-transactions-in-partnership-with-bitt/","title":"Cayman Compass – RF to offer digital currency transactions in partnership with Bitt","createdAt":"2021-01-13","paragraphs":[]},{"id":5,"link":"https://www.coindesk.com/argentinas-ripio-acquires-second-largest-crypto-exchange-in-brazil","title":"Coindesk – Argentina’s Ripio Acquires Second-Largest Crypto Exchange in Brazil","createdAt":"2021-01-05","paragraphs":[]},{"id":6,"link":"https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/","title":"Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North America","createdAt":"2020-10-30","paragraphs":[]},{"id":7,"link":"https://bitcoinexchangeguide.com/mastercard-and-grainchain-launch-blockchain-food-traceability-platform-for-latin-north-america/","title":"Bitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North AmericaBitcoin Exchange Guide – Mastercard And GrainChain Launch Blockchain Food Traceability Platform For Latin & North America","createdAt":"2020-10-30","paragraphs":[]},{"id":8,"link":"https://www.coindesk.com/overstocks-medici-ventures-invests-8m-in-blockchain-firm-bitt","title":"Coindesk – Overstock’s Medici Ventures Invests $8M in Blockchain Firm Bitt","createdAt":"2020-10-28","paragraphs":[]},{"id":9,"link":"https://www.ledgerinsights.com/stella-artois-budweiser-owner-ab-inbev-uses-blockchain-from-barley-field-to-bar/","title":"Ledger Insights – Stella Artois, Budweiser owner AB InBev uses blockchain from barley field to bar","createdAt":"2020-10-26","paragraphs":[]}]},"path":"news","sharedData":{},"siteData":{}};</script><script defer="" type="text/javascript" src="http://34.117.120.35/templates/styles.7aeff49b.js"></script><script defer="" type="text/javascript" src="http://34.117.120.35/templates/vendors~main.55afa740.js"></script><script defer="" type="text/javascript" src="http://34.117.120.35/main.df7cab44.js"></script></body></html>
