@@ -24,9 +24,6 @@ export default function Home() {
         <div className="companies">
             <Main role="main">
                 <Meta {...meta} />
-                <Hero>
-                    <h1><span>{heading1}</span><br />{heading1b}</h1>
-                </Hero>
                 {renderCompanyList()}
                 <ContactUs>
                     <ButtonLink to="/contact" isMobile={store.isMobile}>Contact Us</ButtonLink>

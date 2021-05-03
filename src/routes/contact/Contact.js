@@ -115,12 +115,6 @@ export default function Contact() {
         <div className="contact">
             <Meta {...meta} />
             <main role="main">
-                <HeroImg>
-                    <source media="(min-width: 1200px)" srcSet={heroImgLg} />
-                    <source media="(min-width: 900px)" srcSet={heroImgMed} />
-                    <source media="(max-width: 600px)" srcSet={heroImgSm} />
-                    <img src={heroImgMed} alt="Peace Coliseum" />
-                </HeroImg>
 
                 <Inquiries>
                     <div className="inquiries-data">
@@ -137,11 +131,6 @@ export default function Contact() {
                             <p>pr@pelionvp.com</p>
                         </div>
                     </div>
-                    <MapImg>
-                        <source media="(min-width: 601px)" srcSet={mapImg} />
-                        <source media="(max-width: 600px)" srcSet={mapImgSm} />
-                        <img src={mapImgSm} alt="Medici Ventures Location" />
-                    </MapImg>
                 </Inquiries>
             </main>
         </div>

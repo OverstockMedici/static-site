@@ -29,6 +29,10 @@ export const Inquiries = styled.section`
         margin: 40px 0 25px 0;
     }
 
+    .inquiries-data {
+        margin-top: 90px;
+    }
+
     p {
         color: #0b1500;
         font-size: 20px;
