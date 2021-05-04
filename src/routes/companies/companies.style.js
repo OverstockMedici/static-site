@@ -135,6 +135,7 @@ export const CompanyListDesktop = styled.section`
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        margin-top: 65px;
     }
 
     a {
