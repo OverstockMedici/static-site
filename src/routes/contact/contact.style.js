@@ -30,7 +30,7 @@ export const Inquiries = styled.section`
     }
 
     .inquiries-data {
-        margin-top: 90px;
+        margin-top: 120px;
     }
 
     p {
