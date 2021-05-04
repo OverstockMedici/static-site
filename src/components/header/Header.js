@@ -67,7 +67,7 @@ export default function Header() {
             </SiteHeader>
             <Banner
                 text="Overstock Closes Strategic Partnership with Pelion Venture Partners to Oversee Medici Ventures’ Blockchain Assets"
-                link="https://investors.overstock.com/news-releases/news-release-details/overstock-partners-pelion-venture-partners-oversee-medici"
+                link="https://investors.overstock.com/news-releases/news-release-details/overstock-closes-transaction-pelion-venture-partners-oversee"
             />
         </HeaderWrapper>
     );
